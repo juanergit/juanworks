@@ -1,0 +1,106 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.firstpart,.secondpart,.thirdpart,.fifpart{
+    border:1px solid orange;
+    text-align: center;
+    width:800px;
+    margin:40px auto;
+    border-radius:25px;
+    box-shadow: 1px 1px 10px red;
+}
+.firstpart #fp1,.firstpart #fp2,.secondpart .hr1,.secondpart .hr2,.secondpart .hr3 {
+    width: 100px;
+    height: 100px;
+    background-color: #BC7A00;
+    margin:50px;
+
+}
+#fp1{
+    padding: 20px;
+    border: 4px solid aquamarine;
+
+}
+#fp1 #normal{
+    background-color:darkgray;
+    border:2px solid royalblue;
+    color:beige;
+    font-size:13px;
+}
+#fp2,.secondpart {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; /* Firefox */
+    -webkit-box-sizing: border-box; /* Safari chrome */
+    padding: 20px;
+    border: 4px solid aquamarine;
+}
+
+#fp2 #abnormal{
+    background-color:darkgray;
+    border:2px solid royalblue;
+    color:beige;
+    font-size:13px;
+}
+.secondpart,.thirdpart{
+    padding:0px;
+}
+.secondpart .sp1{
+    display:-webkit-flex;/* safari chrome opera*/
+    display:flex;
+    -webkit-flex-direction: column; /* safari chrome opera*/
+    flex-direction: column;
+}
+.secondpart .hr1,.secondpart .hr2,.secondpart .hr3,.thirdpart .vr1,.thirdpart .vr2,.thirdpart .vr3{
+    margin:0px;
+    line-height:100px;
+    font-size:40px;
+    color:chartreuse;
+    width:100%;
+    -webkit-flex:1;
+    flex:1;
+    padding:0px;
+    border-radius: 25px;
+}
+.secondpart .hr1,.thirdpart .vr1{
+    background-color: #317ef3;
+    order:2;
+}
+.secondpart .hr2,.thirdpart .vr2{
+    background-color: fuchsia;
+    order:3;
+
+}
+.thirdpart .vr3{
+    background-color: #BC7A00;
+}
+.thirdpart .sp1{
+    display:-webkit-flex;/* safari chrome opera*/
+    display:flex;
+    -webkit-flex-direction: row; /* safari chrome opera*/
+    flex-direction: row;
+    box-shadow:1px 1px 30px chartreuse;
+}
+.forthpart{
+    -webkit-column-count: 3;/* safari chrome opera*/
+    -webkit-column-rule-style: dotted;
+    -webkit-column-gap: 60px;
+    -moz-column-count: 3;/*firefox*/
+    -moz-column-rule-style: dotted;
+    -moz-column-gap: 60px;
+    column-count: 3;
+    column-rule-style: dotted;
+    column-gap: 60px;
+
+}
+.fifpart,.firstpart{
+    display:-webkit-box;/* safari chrome opera*/
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display:-moz-box;/*firefox*/
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    height:400px;
+}
+
+

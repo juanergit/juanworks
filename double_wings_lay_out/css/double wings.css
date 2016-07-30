@@ -1,0 +1,113 @@
+
+body, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-top: 2px;
+}
+
+.header, .left, .right, .middle, .footer {
+    margin-bottom: 10px;
+}
+.content{
+    height:400px;
+    overflow: hidden;
+}
+.left, .right, .middle {
+    padding-top: 30px;
+    margin-bottom:-9999px;
+    padding-bottom: 9999px;
+}
+
+.left, .right, .middle, .inner img, .inner p, .inner ul {
+    float: left;
+}
+.middle li,.left li{
+    height:24px;
+}
+.middle ul li a, .left ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding-left: 30px;
+}
+.middle {
+    width: 100%;
+    background-color: chartreuse;
+}
+
+.middle .inner {
+    margin-left: 200px;
+    margin-right: 400px;
+
+}
+
+.middle .inner p {
+    font-size: 20px;
+    margin-left: 30px;
+    font-weight: bold;
+
+}
+
+.left {
+    width: 150px;
+    margin-left: -100%;
+    background-color: chocolate;
+}
+
+.left li {
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+.left .leftFli {
+    background: url(../images/shouye.png) no-repeat;
+}
+
+.left .leftSli {
+    background: url(../images/video.png) no-repeat;
+}
+
+.left .leftTli {
+    background: url(../images/beijing.png) no-repeat;
+}
+
+.left .leftFrli {
+    background: url(../images/news.ico) no-repeat;
+}
+
+.left .leftFvli {
+    background: url(../images/fanancial.png) no-repeat;
+}
+
+.right {
+    width: 400px;
+    margin-left: -400px;
+    font-size: 14px;
+    background-color: deeppink;
+}
+
+.right p {
+    width: 360px;
+    margin: 0 auto;
+}
+
+.footer {
+    clear: both;
+    height: 80px;
+    background-color: blueviolet;
+}
+
+.footer div {
+    width: 800px;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
