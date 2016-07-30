@@ -1,0 +1,171 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px; /*盒子在浏览器中水平垂直居中*/
+    -webkit-transform-style: preserve-3d; /*适用于 safari chrome opera*/
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 78px 78px 0;/*适用于safari chrome*/
+    -moz-transform-origin: 78px 78px 0;/*firefox*/
+    -ms-transform-origin: 78px 78px 0;/*ie*/
+    -o-transform-origin: 78px 78px 0;/*opera*/
+    transform-origin: 78px 78px 0;
+    -webkit-animation: box 2s ease-in-out infinite alternate;/*safari chrome opera*/
+    -moz-animation: box 2s ease-in-out infinite alternate; /*firefox*/
+    -o-animation: box 2s ease-in-out infinite alternate;/*opera*/
+    animation: box 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes box { /*safari chrome*/
+    25% {
+        -webkit-transform: rotateZ(90deg) rotateX(90deg);
+    }
+    50% {
+        -webkit-transform: rotateZ(180deg) rotateY(180deg);
+    }
+    75% {
+        -webkit-transform: rotateZ(270deg) rotateY(270deg);
+    }
+    100% {
+        -webkit-transform: rotateY(360deg) rotateX(360deg);
+    }
+
+}
+
+@-moz-keyframes box {  /*firefox*/
+    25% {
+        -moz-transform: rotateZ(90deg) rotateX(90deg);
+    }
+    50% {
+        -moz-transform: rotateZ(180deg) rotateY(180deg);
+    }
+    75% {
+        -moz-transform: rotateZ(270deg) rotateY(270deg);
+    }
+    100% {
+        -moz-transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+
+@-ms-keyframes box { /*ie*/
+    25% {
+        -ms-transform: rotateZ(90deg) rotateX(90deg);
+    }
+    50% {
+        -ms-transform: rotateZ(180deg) rotateY(180deg);
+    }
+    75% {
+        -ms-transform: rotateZ(270deg) rotateY(270deg);
+    }
+    100% {
+        -ms-transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+
+@-o-keyframes box { /*opera*/
+    25% {
+       -o-transform: rotateZ(90deg) rotateX(90deg);
+    }
+    50% {
+        -o-transform: rotateZ(180deg) rotateY(180deg);
+    }
+    75% {
+        -o-transform: rotateZ(270deg) rotateY(270deg);
+    }
+    100% {
+        -o-transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+
+@keyframes box {
+    25% {
+        transform: rotateZ(90deg) rotateX(90deg);
+    }
+    50% {
+        transform: rotateZ(180deg) rotateY(180deg);
+    }
+    75% {
+        transform: rotateZ(270deg) rotateY(270deg);
+    }
+    100% {
+        transform: rotateY(360deg) rotateX(360deg);
+    }
+}
+
+.firstSection, .secondSection, .thirdSection, .forthSection, .fifthSection, .sixthSection {
+    width: 156px;
+    height: 156px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -78px 0 0 -78px;
+    border:1px solid black;
+
+}
+
+.firstSection div, .secondSection div, .thirdSection div, .forthSection div, .fifthSection div,
+.sixthSection div {
+    width: 50px;
+    height: 50px;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    color: chartreuse;
+    border:1px solid black;
+}
+
+.firstSection{
+    -webkit-transform: translateZ(78px);/*safari chrome opera*/
+    -moz-transform: translateZ(78px);/*firefox*/
+    -ms-transform: translateZ(78px);/*ie*/
+    transform: translateZ(78px);
+}
+
+.secondSection {
+    background-color: cornflowerblue;
+    -webkit-transform: rotateY(-90deg)  translateZ(78px);
+    -moz-transform: rotateY(-90deg) translateZ(78px);
+    -ms-transform: rotateY(-90deg) translateZ(78px);
+    transform:rotateY(-90deg) translateZ(78px);
+
+}
+
+.thirdSection {
+    background-color: chocolate;
+    -webkit-transform: rotateY(90deg)translateZ(78px);
+    -moz-transform: rotateY(90deg) translateZ(78px);
+    -ms-transform: rotateY(90deg)translateZ(78px);
+    transform:  rotateY(90deg)translateZ(78px);
+}
+
+.forthSection {
+    background-color: deeppink;
+    -webkit-transform: rotateX(90deg)translateZ(78px);
+    -moz-transform: rotateX(90deg)translateZ(78px);
+    -ms-transform: rotateX(90deg)translateZ(78px);
+    transform:rotateX(90deg)translateZ(78px);
+}
+
+.fifthSection {
+    background-color: coral;
+    -webkit-transform: rotateX(-90deg)translateZ(78px);
+    -moz-transform: rotateX(-90deg)translateZ(78px);
+    -ms-transform: rotateX(-90deg)translateZ(78px);
+    transform:rotateX(-90deg)translateZ(78px);
+}
+
+.sixthSection {
+    background-color: blueviolet;
+    -webkit-transform: translateZ(-78px) rotateY(180deg);
+    -moz-transform: translateZ(-78px)rotateY(180deg);
+    -ms-transform: translateZ(-78px)rotateY(180deg);
+    transform:translateZ(-78px)rotateY(180deg);
+}
