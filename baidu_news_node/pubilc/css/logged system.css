@@ -1,0 +1,102 @@
+.container {
+    background-color: #0e4a80;
+    height: 600px;
+    display: -webkit-box;
+    display: -moz-box;  /*ie不支持*/
+    -webkit-box-align: center;/*chrome,safari,opera*/
+    -moz-box-align: center;/*firefox*/
+    -webkit-box-pack: center;/*chrome,safari,opera*/
+    -moz-box-pack:center;/*firefox*/
+}
+
+.outline{
+    width:440px;
+    height:257px;
+    background-color: #5786b0;
+    padding:27px 37px;
+    -webkit-box-sizing: border-box;/*chrome*/
+    -moz-box-sizing: border-box;/*firefox*/
+    box-sizing:border-box;
+    border:1px solid white;
+    box-shadow: 0 0 2px #ffffff;
+}
+
+.inner{
+    position: relative;
+    width:100%;
+    height:100%;
+    background:url(../images/banner_1.jpg);
+    background-size: 100% 100%;
+}
+.inner img{
+    width:100px;
+    margin-top:15px;
+}
+.container .outline .inner .login-screen{
+    background-color: #adbfd3;
+    position:absolute;
+    width:220px;
+    right:0;
+    top:0;
+    height:100%;
+    padding-top:20px;
+    -webkit-box-sizing: border-box;/*chrome*/
+    -moz-box-sizing: border-box;/*firefox*/
+    box-sizing:border-box;
+    color:#ffffff;
+
+}
+
+.container .outline .inner .login-screen .form-horizontal .control-group .control-label{
+   width:60px;
+    font-size:13px;
+    font-weight: bold;
+}
+.container .outline .inner .login-screen .form-horizontal .control-group .controls{
+  margin-left:60px;
+}
+.container .outline .inner .login-screen .form-horizontal .control-group .controls input{
+    width:120px;
+    font:12px "华文仿宋" ;
+
+}
+.container .outline .inner .login-screen .form-horizontal .control-group{
+    background-color: #349ed8;
+    width:191px;
+    margin:0 auto 10px;
+}
+.container .outline .inner .login-screen .form-horizontal .control-group .controls .btn{
+    width:132px;
+}
+.container .outline .inner .login-screen .form-horizontal  #submit-group{
+    margin-top:20px;
+    background-color:#83ac46;
+}
+.container .outline .inner .login-screen .form-horizontal  #submit-group .btn-primary{
+    background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#6ac13f), to(#83ac46));
+    width:191px;
+    margin-left:-60px;
+    margin-top:-1px;
+    font-weight: bold;
+    font-size:18px;
+    line-height:25px;
+}
+.container .outline .inner .login-screen .form-horizontal  #submit-group button{
+    width:132px;
+}
+.container .outline .inner .login-screen .form-horizontal .control-group #inputVer-code,
+.container .outline .inner .login-screen .form-horizontal .control-group .add-on{
+    width:54px;
+    border:none;
+    height:22px;
+    margin-left:-1px;
+}
+.container .outline .inner .login-screen .form-horizontal .control-group .add-on{
+    border-left:1px solid #c19a3f;
+    border-right:2px solid #c19a3f;
+    background-color:#c19a3f ;
+    border-radius: 0;
+}
+.container .outline .inner .login-screen .form-horizontal .control-group .input-append{
+    margin-left:0;
+}

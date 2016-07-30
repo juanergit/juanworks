@@ -1,0 +1,212 @@
+body{
+    margin:0;
+    padding:0;
+    font:14px  Arial,'雅黑';
+
+}
+  h1,h2,h3,h4,h5,h6,p{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+
+.container-fluid {
+    color: #333333;
+
+    background-color:#EFEFEF;
+
+}
+#container{
+    padding:0;
+    width:100%;
+
+
+ }
+.container-fluid .header {
+height:45px;
+    line-height: 50px;
+    position: relative;
+    background-color:#000;
+    color:#fff;
+    padding-top:10px;
+    padding-left:10px;
+    width:1240px;
+    margin:0 auto;
+}
+.container-fluid .header p{
+    height:16px;
+    line-height: 16px;
+}
+
+.container-fluid .header .i-c-text-title{
+    font-size: 20px;
+    letter-spacing: 8px;
+}
+.container-fluid .header .exit{
+    position:absolute;
+    right:30px;
+    top:13px;
+}
+
+/*content css部分开始*/
+.container-fluid .content {
+    background-color: #fafafa;
+    width:1250px;
+    margin:0 auto;
+}
+
+.container-fluid .content #aside-nav {
+    background-color: #000;
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+    min-height:550px;
+    border-top: 1px solid #dcdcdc;
+}
+.container-fluid .content #aside-nav .a-nav-title,.container-fluid .content .row-fluid #main-content .nav-tabs li,
+.container-fluid .content .row-fluid #main-content .tab-content #vlan-info .top-position-info,
+.tab-content #vlan-info .vlan-info-search input, .tab-content #vlan-info .vlan-info-search select,
+.table-striped .vlan-lists-tr,.table-striped .vlan-lists-tr td, .table-striped .vlan-lists-tr th{
+    -webkit-box-sizing: border-box;/*chrome*/
+    -moz-box-sizing: border-box;/*firefox*/
+    box-sizing: border-box;
+}
+
+.container-fluid .content #aside-nav .a-nav-title {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-left: 15px;
+    line-height: 30px;
+    height: 30px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.container-fluid .content #aside-nav .a-nav-title .icon-down {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    vertical-align: middle;
+    font-size: 18px;
+}
+.container-fluid .content .row-fluid .childMenu {
+    list-style-type: none;
+    display: none;
+}
+
+.container-fluid .content .row-fluid #softWare{
+    display: block;
+}
+
+.container-fluid .content .row-fluid #aside-nav .menu-first-level,
+.container-fluid .content .row-fluid #aside-nav .childMenu .menu-second-level {
+    display: inline-block;
+    width: 100%;
+    font-weight: normal;
+    height: 20px;
+   color:#fff;
+}
+
+.container-fluid .content .row-fluid #aside-nav .childMenu .menu-second-level {
+    margin: 2px 0;
+}
+
+.container-fluid .content .row-fluid #aside-nav .menu-first-level:hover,
+.container-fluid .content .row-fluid #aside-nav .menu-first-level:active,
+.container-fluid .content .row-fluid #aside-nav .childMenu .menu-second-level:hover,
+.container-fluid .content .row-fluid #aside-nav .childMenu .menu-second-level:active {
+    background-color: #eeeeee;
+    color: #03a085;
+    text-decoration: none;
+}
+
+.container-fluid .content .row-fluid #aside-nav .menu-first-level:visited,
+.container-fluid .content .row-fluid #aside-nav .menu-first-level:link,
+.container-fluid .content .row-fluid #aside-nav .childMenu .menu-second-level:visited
+.container-fluid .content .row-fluid #aside-nav .childMenu .menu-second-level:link {
+    text-decoration: none;
+}
+/*新闻主界面CSS。。。。。。。。。。。。。。。。*/
+.content #main-content {
+    margin:0;
+    width:85%;
+}
+.content #main-content  #news_mian  .news-mian-title{
+    background-image: linear-gradient(to bottom,#F9F9F9,#E9E9E9);
+    height:35px;
+    margin:0;
+    line-height: 35px;
+    padding-left:20px;
+
+}
+.content #main-content .news-mian-content{
+    margin-top:20px;
+}
+.content #main-content .news-mian-content form{
+    margin:0;
+}
+.content #main-content .news-table{
+    margin:0 auto;
+    table-layout:fixed;
+}
+.content #main-content .news-table thead{
+background-color:#F4F4F4 ;
+
+}
+  .news-table  tr td ,  .news-table tr  th{
+    border:1px solid #000;
+      height:39px;
+   /*   padding:5px 10px;*/
+      overflow: hidden;
+      font-size:12px;
+      text-align: center;
+}
+.news-table th{
+    padding:0;
+    text-align: center;
+}
+#main-content .pagination{
+    margin:0;
+    text-align: center;
+    height:41px;
+}
+#main-content .pagination ul{
+    margin-top:10px;
+    margin-bottom: -4px;
+}
+
+#main-content .pagination ul li span{
+    color:#000;
+    width:10px;
+    font-size:16px;
+    border-color: #000;
+    cursor:pointer;
+}
+#main-content .pagination ul  .special span{
+    width:40px;
+    text-align: left;
+    padding-right:0;
+}
+.content #main-content .modify-section form{
+    float:left;
+    width:25%;
+    text-align: center;
+    margin:0;
+    height:45px;
+    line-height: 45px;
+    font-size:12px;
+}
+
+/*footer css............*/
+.footer{
+    background-color: #000;
+    color:#fff;
+    height:45px;
+    line-height: 45px;
+    text-align: center;
+    width:1250px;
+    margin:1px auto 0 auto;
+}

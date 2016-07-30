@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新闻管理系统</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/news_management.css" rel="stylesheet" type="text/css"/>
+    <link href="../icomoon/style.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<div class="container-fluid" id="container">
+    <!--头部部分start-->
+    <div class="header">
+        <div class="h_title">
+            <div class="h_t_vertical"></div>
+            <div class="info-commu">
+                <p class="i-c-text-title"><b>新闻管理系统</b></p>
+
+                <p>News Management System</p>
+            </div>
+            <form action="logged_system.html" method="">
+                <input type="submit" class="exit btn btn-inverse" value="退出"/>
+            </form>
+        </div>
+
+    </div>
+    <!--头部部分end-->
+    <!--内容部分start-->
+    <div class="content">
+        <div class="row-fluid">
+            <div class="span2" id="aside-nav"> <!--使用bootstrap布局，这是左边部分， 占20% ，这是菜单导航部分-->
+                <div class="a-nav-title">
+                    <span class="nav-title-text">首页</span>
+                    <span class="icon-down"></span>
+                </div>
+                <div class="nav-hardWare"> <!--硬件资源管理部分-->
+                    <p>
+                        <a href="javascript:show('hardWare')" class="menu-first-level">
+                            <span class="icon-right-arrow"></span>
+                            栏目设置
+                        </a>
+                    </p>
+                    <ul id="hardWare" class="childMenu">
+                        <li>
+                            <a href="" class="menu-second-level">
+                                <span class="icon-right-arrow"></span>
+                                推荐
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="" class="menu-second-level">
+                                <span class="icon-right-arrow"></span>
+                                娱乐
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="menu-second-level">
+                                <span class="icon-right-arrow"></span>
+                                社会
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="menu-second-level">
+                                <span class="icon-right-arrow"></span>
+                                互联网
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-softWare"> <!--软件资源管理部分-->
+                    <p>
+                        <a href="javascript:show('softWare')" class="menu-first-level">
+                            <span class="icon-right-arrow"></span>
+                            新闻管理
+                        </a>
+                    </p>
+                    <ul id="softWare" class="childMenu">
+                        <li>
+                            <a href="" class="menu-second-level">
+                                <span class="icon-right-arrow"></span>
+                                新闻主界面
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="" class="menu-second-level">
+                                <span class="icon-right-arrow"></span>
+                                其他
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-virtual-res"> <!--虚拟资源管理部分-->
+                    <p>
+                        <a href="javascript:show('virtual-res')" class="menu-first-level">
+                            <span class="icon-right-arrow"></span>
+                            产品管理
+                        </a>
+                    </p>
+                    <ul id="virtual-res" class="childMenu">
+                        <li>
+                            <a href="" class="menu-second-level">
+                                <span class="icon-right-arrow"></span>
+                                产品1
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="" class="menu-second-level">
+                                <span class="icon-right-arrow"></span>
+                                产品2
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="menu-second-level">
+                                <span class="icon-right-arrow"></span>
+                                产品3
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="menu-second-level">
+                                <span class="icon-right-arrow"></span>
+                                产品4
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-basic-support"> <!--基础支撑资源部分-->
+                    <p>
+                        <a href="javascript:show('basic-support')" class="menu-first-level">
+                            <span class="icon-right-arrow"></span>
+                            基础支撑资源
+                        </a>
+                    </p>
+                    <ul id="basic-support" class="childMenu">
+                        <li>
+                            <a href="" class="menu-second-level">
+                                <span class="icon-right-arrow"></span>
+                                VALN管理
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="" class="menu-second-level">
+                                <span class="icon-right-arrow"></span>
+                                IP地址管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="menu-second-level">
+                                <span class="icon-right-arrow"></span>
+                                机柜空间管理
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="span10" id="main-content"> <!--使用bootstrap布局，这是右边部分，占80%，菜单对应的具体内容窗口-->
+                <div id="news_mian">
+                    <h4 class="news-mian-title">新闻主界面</h4>
+                </div>
+                <div class="news-mian-content">
+                    <form action="" method="">
+                        <table width="98%" class="news-table table-striped" id="newsTable"  style="table-layout:fixed " >
+                            <caption><h4>新闻列表</h4></caption>
+                            <thead>
+                            <tr>
+                                <th width="5%" height="30px"> news_id</th>
+                                <th width="6%" height="30px"> news_type</th>
+                                <th width="16%" height="30px">news_title</th>
+                                <th width="16%" height="30px">src</th>
+                                <th width="16%" height="30px">src2</th>
+                                <th width="16%" height="30px">src3</th>
+                                <th width="20%" height="30px">detail</th>
+                                <th >address</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tableBody">
+                            <tr>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                                <td ></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <div class="pagination" id="change_items">
+                        <ul id="pagination_ul">
+                            <li class="disabled special"><span id="first">first</span></li>
+                            <li class="active"><span>1</span></li>
+                            <li class="active"><span>2</span></li>
+                            <li class="active"><span>3</span></li>
+                            <li class="active"><span>4</span></li>
+                            <li class="active"><span>5</span></li>
+                            <li class="active" id="last_second"><span id="s">6</span></li>
+                            <li class="disabled special"><span  id="last">last</span></li>
+                        </ul>
+                    </div>
+                    <div class="modify-section">
+                        <form action="add.html" method="">
+                            <input type="submit" class="btn btn-inverse" id="addBtn" value="添加">
+                        </form>
+                        <form action="edit.html" method="">
+                            <input type="submit" class="btn btn-inverse" id="editBtn" value="编辑">
+                        </form>
+                        <form action="delete.html" method="">
+                            <input type="submit" class="btn btn-inverse" id="deleteBtn" value="删除">
+                        </form>
+                        <form action="" method="">
+                            <input type="submit" class=" btn btn-inverse" id="refreshBtn" value="刷新">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--内容部分end-->
+    <!--版权部分start-->
+    <div class="footer">
+        <span>Copyright</span>
+        <span class="icon-copyright"></span>
+        <span>2003-2013</span>
+        <span>国家新闻版权所有</span>
+        <span>国网安备990900058号</span>
+    </div>
+    <!--版权部分end  -->
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/news_management.js"></script>
+<script>
+
+</script>
+</body>
+</html>
