@@ -1,0 +1,86 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M652.519 165.796c-134.397-134.395-352.323-134.395-486.721 0-134.397 134.41-134.397 352.332 0 486.727 130.861 130.858 340.852 134.249 475.878 10.316l296.164 296.161 21.16-21.159-296.165-296.175c123.949-135.009 120.544-345.011-10.316-475.87zM631.358 631.363c-122.517 122.515-321.884 122.515-444.4 0-122.517-122.514-122.517-321.878 0-444.393 122.517-122.529 321.884-122.529 444.4 0 122.517 122.515 122.517 321.879 0 444.393z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"grid": 0,
+				"tags": [
+					"magnifying-glass"
+				]
+			},
+			"attrs": [],
+			"properties": {
+				"order": 48,
+				"id": 14,
+				"prevSize": 64,
+				"code": 59667,
+				"name": "magnifying-glass"
+			},
+			"setIdx": 0,
+			"setId": 4,
+			"iconIdx": 0
+		},
+		{
+			"icon": {
+				"paths": [
+					"M289.921-4.311h51.747v1033.041h-51.747v-1033.041z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"grid": 0,
+				"tags": [
+					"vertical_line"
+				]
+			},
+			"attrs": [],
+			"properties": {
+				"order": 51,
+				"id": 9,
+				"prevSize": 64,
+				"code": 59668,
+				"name": "vertical_line"
+			},
+			"setIdx": 1,
+			"setId": 3,
+			"iconIdx": 14
+		}
+	],
+	"height": 1024,
+	"metadata": {
+		"name": "icomoon"
+	},
+	"preferences": {
+		"showGlyphs": true,
+		"showQuickUse": false,
+		"showQuickUse2": true,
+		"showSVGs": true,
+		"fontPref": {
+			"prefix": "icon-",
+			"metadata": {
+				"fontFamily": "icomoon"
+			},
+			"metrics": {
+				"emSize": 1024,
+				"baseline": 6.25,
+				"whitespace": 50
+			},
+			"embed": false
+		},
+		"imagePref": {
+			"prefix": "icon-",
+			"png": true,
+			"useClassSelector": true,
+			"color": 0,
+			"bgColor": 16777215,
+			"classSelector": ".icon"
+		},
+		"historySize": 100,
+		"showCodes": true,
+		"gridSize": 16
+	}
+}

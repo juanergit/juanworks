@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简易计算器</title>
+    <link href="../css/simple_calculation.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<form>
+    <label for="the_first_num">数字1:</label>
+    <input type="number" name="the_first_num" id="the_first_num" placeholder="请输入第一个数字"/>
+    <label for="the_second_num">数字2:</label>
+    <input type="number" name="the_second_num" id="the_second_num" placeholder="请输入第二个数字"/>
+    <span>运算符:</span>
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <label for="result">结果&nbsp;:</label>
+    <input type="text" name="result" id="result"/>
+    <button type="button" onclick="calculator();">提交</button>
+</form>
+
+<script type="text/javascript" src="../js/simple_calculation.js"></script>
+</body>
+</html>
