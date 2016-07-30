@@ -1,0 +1,860 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+html, body {
+    height: 100%
+}
+
+.icon-nuomi, .icon-video, .icon-novel, .icon-landing, .icon-news, .icon-map, .icon-skin, .icon-up-more,.icon-down,.icon-plus
+.weather_s .city_weather a .show_weather .city-air ,.weather_s .city_weather a .show_weather #city_colon,
+.header .index_menu #index_novel,.header .ulClass ,.content #baidu_img_phone,.commonly_used_web #c_u_aid, .content .commonly_used_web .c_u_web,
+.main_index #drop-down #drop-down-nav,.main_index #drop-down .real-time-news .real-time-title .change_text .change-a-num
+{
+    display: none;
+}
+
+.container {
+   min-width:930px;
+    height: 100%;
+}
+
+.container, .content, .content #form_span,.content ,.content .commonly_used_web ,.commonly_used_web #c_u_aid a,
+.main_index .menu_container,.main_index .menu_container .menu_item ,.main_index #drop-down ,
+.main_index #drop-down .real-time-news .real-time-title{
+    position: relative;
+}
+
+.content .camera, .header .ulClass,.header .index_menu ,.content .commonly_used_web .plus_edit,
+.main_index #drop-down .real-time-news,.main_index #drop-down .real-time-news .real-time-title .change ,
+.footer {
+    position: absolute;
+}
+
+.weather_s .service_icons, .weather .city_weather,.header ul li ,.commonly_used_web #c_u_aid a ,
+.main_index #drop-down .real-time-news #hot-series li {
+    float: left;
+}
+.weather .weather_s .city_weather a,.header .aClass ,.header .ulClass li a,.commonly_used_web #c_u_aid a,
+.main_index #drop-down .nav_special,.main_index #drop-down .drop-down-interest .news-item-1 .title-2 a,
+.main_index #drop-down .drop-down-interest .from a, .main_index #drop-down .drop-down-interest .from span,
+.main_index #drop-down .real-time-news .hot-news,.main_index #drop-down .real-time-news #hot-series li a,
+.main_index #drop-down .nav_mine {
+    text-decoration: none;
+}
+.weather_s .service_icons a ,.heder .ulClass .liSeven {
+    text-decoration: underline;
+}
+
+.header .weather_wrap {
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.city_weather {
+    margin-left: 15px;
+    margin-top: 2px;
+}
+
+
+.weather .city_weather .show_weather,.weather .city_weather .show-city, .weather .city_weather .show_pollution {
+    display: inline-block;
+}
+
+.weather .city_weather .show_pollution .show_vertical {
+    margin-right: 7px;
+}
+
+.weather_s .city_weather a .show_weather span {
+    color: #555;
+}
+
+.weather_s .show_pollution .show_pollution_name {
+    color: #38f;
+    font-weight: bold;
+}
+.weather_s .service_icons a {
+    display: inline-block;
+    margin-right: 14px;
+}
+.weather_s .service_icons a #skin-text {
+    color: #555;
+    font: 12px arial;
+}
+
+.container {
+    height: 100%;
+}
+.header .index_menu {
+    right: 0;
+    top: 0;
+    height: 33px;
+    line-height: 33px;
+}
+.header .index_menu #index_NoMi_web,.header .index_menu #index_news ,.header .index_menu #index_novel,.header .index_menu #index_hao123,
+.header .index_menu #index_map,.header .index_menu #index_video,.header .index_menu #index_postBar
+{
+    font-weight:bold;
+}
+
+.header ul li {
+    list-style-type: none;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.header a {
+    color: #333;
+}
+
+.header a:hover, .header a:active {
+    color: #2d78f4;
+    cursor: pointer;
+}
+
+.header #liMore {
+    padding-right: 0px;
+}
+
+.header .aClass {
+    display: block;
+    width: 86px;
+    height: 32px;
+    background: #3385ff;
+    color: white;
+    line-height: 32px;
+    text-align: center;
+
+}
+
+.header .aClass:hover {
+    background-color: ghostwhite;
+    color: #333;
+    cursor: default;
+}
+
+.header .ulClass {
+    width: 86px;
+    background-color: ghostwhite;
+}
+
+.header .ulClass li {
+    margin: 0;
+    padding: 0;
+
+}
+
+.header .ulClass li a {
+    width: 86px;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.header .ulClass .liSeven a {
+    padding: 0;
+}
+
+.header .ulClass .liFirst {
+    background: url(../images/music.png) top center no-repeat;
+}
+
+.header .ulClass .liSecond {
+    background: url(../images/image.png) top center no-repeat;
+}
+
+.header .ulClass .liThird {
+    background: url(../images/zhidao.png) top center no-repeat;
+}
+
+.header .ulClass .liForth {
+    background: url(../images/wenku.png) top center no-repeat;
+}
+
+.header .ulClass .liFifth {
+    background: url(../images/top.png) top center no-repeat;
+}
+
+.header .ulClass .liSixth {
+    background: url(../images/baidui.png) top center no-repeat;
+}
+
+.content {
+    clear: both;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.content #baidu_img {
+    width: 270px;
+    height: 129px;
+}
+
+.content #form_span {
+    display: inline-block;
+    width: 41.53%;
+    -webit-box-sizing: border-box;/*chrome*/
+    -moz-box-sizing: border-box;/*firefox*/
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    padding-left: 7px;
+    height: 36px;
+}
+
+.content .camera {
+    background: url(../images/camera.png) no-repeat;
+    height: 23px;
+    width: 20px;
+    right: 11px;
+    top: 8px;
+}
+
+.content #text1, .content #submit1 {
+    margin-left: -1px;
+
+}
+
+.content #text1 {
+    width: 100%;
+    border: 0;
+    font-size: 16px;
+    height: 34px;
+}
+
+.content #text1:focus {
+    text-shadow: none;
+    border-color: #3385ff;
+    outline: none;
+}
+
+.content #submit1 {
+    width: 100px;
+    height: 36px;
+    border-bottom: 1px solid #2d78f4;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    background-color: #317ef3;
+    font-size: 15px;
+    color: white;
+}
+
+.content #submit1:active, .content #submit1:hover {
+    background-color: #2d78f4;
+    cursor: pointer;
+}
+
+.content .commonly_used_web {
+    font-size: 15px;
+    margin: 40px 7px 0 7px;
+    color: #999;
+}
+
+.content .commonly_used_web h2 {
+    color: #999;
+}
+
+.content .commonly_used_web .c_u_web {
+    text-align: left;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    font-size:15px;
+    color:#999;
+    font-weight:normal;
+}
+
+.content .commonly_used_web .plus_edit {
+    top: 4px;
+    right: 0px;
+
+}
+
+.content .commonly_used_web .plus_edit .icon-edit,
+.main_index #drop-down .real-time-news .real-time-title .icon-edit {
+    display: inline-block;
+    font-size: 23px;
+    width: 0px;
+    height: 20px;
+    line-height: 20px;
+    color: #999;
+    -moz-transform: rotate(90deg); /*firefox*/
+    -webkit-transform: rotate(90deg);/*chrome,safari,opera*/
+    -ms-transform: rotate(90deg);/*ie*/
+    transform: rotate(90deg);
+
+}
+
+.commonly_used_web #c_u_aid, .content .commonly_used_web .c_u_web {
+    overflow: hidden;
+}
+
+
+
+.commonly_used_web #c_u_aid a {
+    display: block;
+    width: 25%;
+    height: 42px;
+    -webit-box-sizing: border-box;/*chrome*/
+    -moz-box-sizing: border-box;/*firefox*/
+    box-sizing: border-box;
+    padding: 0 6px;
+    color: #262626;
+
+}
+
+.commonly_used_web #c_u_aid a span {
+    width: 42px;
+    height: 42px;
+    -webit-box-sizing: border-box;/*chrome*/
+    -moz-box-sizing: border-box;/*firefox*/
+    box-sizing: border-box;
+    padding: 0 6px;
+    font-size:14px;
+}
+
+.commonly_used_web .main_index {
+    width: 895px;
+    border: 1px solid #e9e9e9;
+    margin: 74px auto 0 auto;
+}
+
+
+.main_index .menu_container {
+    text-align: left;
+
+}
+
+.main_index .menu_container .menu_s {
+    height: 39px;
+    border-bottom: 1px solid #e9e9e9
+
+}
+
+
+.main_index .menu_container .menu_s #menu_mine {
+    width: 124px;
+}
+.main_index .menu_container .menu_s #menu_mine .icon-person{
+    display: inline-block;
+    font-size:16px;
+    width:22px;
+    height:27px;
+    vertical-align: bottom;
+    color:#999;
+}
+.main_index .menu_container .menu_item {
+    display: inline-block;
+    font: 14px arial;
+    color: #333;
+    width: 80px;
+    line-height: 39px;
+    text-align: center;
+}
+
+.main_index .menu_container .menu_item:hover, .main_index .menu_container .menu_item:active {
+    background-color: #9a9da2 !important;
+}
+
+.main_index .menu_container #menu-recom {
+    background-color: #9a9da2 !important;
+}
+
+.main_index #drop-down {
+    top: -10px;
+    border-top: none;
+    min-height: 180px;
+    overflow: hidden;
+
+}
+
+.main_index #drop-down #drop-down-nav {
+    margin: 0 auto;
+    width: 844px;
+}
+
+
+
+.main_index #drop-down .nav_mine, .main_index #drop-down .nav_special {
+    display: block;
+    font-weight: bold;
+    color: #000;
+    height: 37px;
+    line-height: 37px;
+    border-bottom: 1px solid #e9e9e9;
+    margin: 10px auto;
+    font-size: 14px;
+
+}
+
+.main_index #drop-down .nav_special {
+    font-weight: normal;
+    border-bottom: 0;
+}
+
+.main_index #drop-down .drop-down-interest {
+    width: 63%;
+
+}
+
+.main_index #drop-down .drop-down-interest .title {
+    margin-top: 26px;
+    margin-left: 26px;
+}
+
+.main_index #drop-down .drop-down-interest .title .left-line, .main_index #drop-down .drop-down-interest .title .right-line {
+    width: 174px;
+    height: 0;
+    border-bottom: 1px solid #e2e2e2;
+    display: inline-block;
+}
+
+.main_index #drop-down .drop-down-interest .title .tips {
+    padding-left: 18px;
+    display: inline-block;
+    height: 14px;
+    vertical-align: bottom;
+    background: url(../images/icon_baidu.png) no-repeat -2px -6px;
+}
+
+.main_index #drop-down .drop-down-interest .news-interest {
+    border-bottom: 1px solid #e2e2e2;
+    margin: 0 0 0 26px;
+}
+
+.main_index #drop-down .drop-down-interest .news-item-1, .main_index #drop-down .drop-down-interest .pic-content-1 {
+    display: inline-block;
+}
+
+.main_index #drop-down .drop-down-interest .news-item-1 {
+    vertical-align: top;
+    width: 65%;
+}
+
+.main_index #drop-down .drop-down-interest .news-item-1 .title-2 {
+    margin-top: 26px;
+    margin-bottom: 16px;
+}
+
+.main_index #drop-down .drop-down-interest .news-item-1 .title-2 a {
+    color: #000;
+    font-size: 18px;
+
+}
+
+.main_index #drop-down .drop-down-interest .news-item-1 .title-2 a:hover, .main_index #drop-down .drop-down-interest .news-item-1 .title-2 a:active {
+    text-decoration: underline;
+    color: #07f;
+}
+
+.main_index #drop-down .drop-down-interest .pic-content-1 img {
+    width: 176px;
+    height: 106px;
+    margin-left: -5px;
+}
+
+.main_index #drop-down .drop-down-interest .pic-content-1 #single-img {
+    margin-top: 26px;
+    margin-left: 7px;
+
+}
+
+.main_index #drop-down .drop-down-interest .from a, .main_index #drop-down .drop-down-interest .from span {
+    display: inline-block;
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.main_index #drop-down .drop-down-interest .pic-content-1 #pic-count-3 li {
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.main_index #drop-down .real-time-news {
+    top: 39px;
+    left: 65.5%;
+    width: 34%;
+}
+
+.main_index #drop-down .real-time-news .hot-news {
+    display: inline-block;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.main_index #drop-down .real-time-news .real-time-title {
+    margin-bottom: 20px;
+}
+
+.main_index #drop-down .real-time-news .real-time-title .icon-spinner9 {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+.main_index #drop-down .real-time-news .real-time-title .change {
+    display: inline-block;
+    right: 19px;
+    top: 0px;
+    cursor: pointer;
+}
+
+.main_index #drop-down .real-time-news .real-time-title .change_text {
+    color: #333;
+    margin-right: 20px;
+}
+
+
+.main_index #drop-down .real-time-news .real-time-title .icon-edit {
+    height: 11px;
+    margin-left: 20px;
+    display: none;
+
+}
+
+.main_index #drop-down .real-time-news #hot-series li {
+    width: 43%;
+    height: 34px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    list-style-type: square;
+}
+
+.main_index #drop-down .real-time-news #hot-series li a {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: -3px;
+    color: #000;
+}
+
+.main_index #drop-down .real-time-news .real-time-title .change_text:hover,
+.main_index #drop-down .real-time-news .real-time-title .change_text:active,
+.main_index #drop-down .real-time-news #hot-series li a:hover,
+.main_index #drop-down .real-time-news #hot-series li a:active {
+    color: #0079f4;
+}
+
+.main_index #drop-down .real-time-news #hot-series li a:hover,
+.main_index #drop-down .real-time-news #hot-series li a:active {
+    text-decoration: underline;
+}
+
+.footer {
+    width: 100%;
+    height: 70px;
+    font-size: 12px;
+    text-align: center;
+
+}
+
+.footerthird {
+    width: 120px;
+    height: 70px;
+    line-height: 70px;
+    margin: 0px auto;
+    -webit-box-sizing: border-box;/*chrome*/
+    -moz-box-sizing: border-box;/*safari*/
+    box-sizing: border-box;
+    padding: 10px 0 10px 0;
+    text-align: center;
+
+}
+
+.footerthird {
+    width: 450px;
+    top: -4px;
+}
+
+.footerthird p {
+    height: 24px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.footer #pid {
+    height: 22px;
+    line-height: 22px;
+}
+
+.footerthird p {
+    display: inline-block;
+    width: 460px;
+}
+
+.footerthird p a, .footerthird p span {
+    color: #999;
+}
+
+.footerthird p #aid {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footerthird #police_record {
+    width: 210px;
+}
+
+.footerthird p img {
+    height: 17px;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: #eeeff0;
+        min-height:680px;
+        overflow: hidden;
+    }
+    .container {
+        min-width:100%;
+        height: 100%;
+    }
+    .header .weather_wrap{
+        border:none;
+        height:54px;
+    }
+    .weather_s .service_icons .service_skin .icon_skin {
+        display: block;
+        font-size: 24px;
+        padding-left: 2px;
+    }
+
+    .icon-nuomi, .icon-video, .icon-novel,.icon-landing ,.icon-news, .icon-map,.icon-skin, .icon-up-more,.icon-plus {
+        display: block;
+        font-size: 20px;
+        padding-left: 2px;
+    }
+    .icon-down,.weather .city_weather .show_pollution .show_pollution_num{
+        height:27px;
+        line-height:27px;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+    .icon-down{
+        height:6px;
+        line-height:6px;
+        vertical-align: middle;
+    }
+  .icon-skin{
+      font-size:23px;
+  }
+    .icon-landing{
+        font-size:16px;
+    }
+    .icon-plus{
+       display: inline-block;
+
+    }
+    .icon-plus:before{
+        font-size:26px;
+        color:#B6B7BA;
+    }
+    .weather_s .city_weather a {
+          color:#999;
+      }
+
+    .weather_s .city_weather a .show_weather .mls{
+        font-size:20px;
+        color:#999;
+    }
+    .weather_s .city_weather a .show_weather .show-city{
+        position:absolute;
+        left:80px;
+        top:5px;
+        width:41px;
+        height:32px;
+        -webit-box-sizing: border-box;/*chrome*/
+        -moz-box-sizing: border-box;/*safari*/
+        box-sizing: border-box;
+
+    }
+
+    .weather_s .city_weather a .show_weather .city-air, .weather_s .city_weather a .show_weather .show_city_name {
+        display: inline-block;
+        line-height:14px;
+        height:14px;
+        color:#999;
+    }
+
+    .weather .city_weather .show_pollution{
+        margin-left:30px;
+    }
+    .weather .city_weather .show_pollution .show_vertical ,.weather .city_weather .show_pollution .show_pollution_name,
+    .weather_s .service_icons .service_treasure, .weather_s .service_icons .service_skin #skin-text,
+    .weather_s .service_icons .service_msg {
+        display: none;
+    }
+
+    .weather_s .service_icons .service_skin {
+        text-decoration: none;
+        position: absolute;
+        top: 8px;
+        right: 0;
+    }
+    .header .index_menu #index_novel {
+        display: block;
+    }
+
+    .header .index_menu #index_hao123, .header .index_menu #index_postBar, .index_menu #index_setting ,
+    .header .index_menu #index_landing #index_landing_text, .header .index_menu #liMore #more_product_text,
+    .content #baidu_img,.main_index .menu_container .menu_s, .main_index #drop-down .real-time-news #hot-series li .icon-square,
+    .main_index #drop-down .drop-down-interest, .main_index #drop-down .real-time-news .real-time-title .change_text .change-to-change,
+    .footer .footerthird #aid, .footer .footerthird #year_baidu,  .footer .footerthird #suggestion{
+        display: none;
+    }
+
+    .header .index_menu #index_landing {
+        position: absolute;
+        right: 35px;
+        top: -195px;
+    }
+
+    .header .index_menu #liMore .aClass {
+        background: none;
+        color: #666;
+        display: inline;
+    }
+
+    .header .index_menu li {
+        width: 16.66%;
+        padding: 0;
+    }
+
+    .header .index_menu li a {
+        display: inline-block;
+        font-size: 12px;
+        text-decoration: none;
+        font-weight:normal;
+        color:#666;
+
+    }
+
+    .header .index_menu {
+        right: 0;
+        top: 200px;
+        width: 100%;
+        z-index:4;
+
+    }
+ .content{
+     margin:0;
+ }
+
+    .content .commonly_used_web {
+        margin-top: 90px;
+    }
+
+    .content .form-wrap {
+        margin: 0 7px;
+        -webkit-box-sizing: border-box;/*chrome*/
+        -moz-box-sizing: border-box;/*firefox*/
+        box-sizing: border-box;
+
+    }
+
+    .content #form_span {
+        height: 42px;
+        width: 74%;
+        -webkit-box-sizing: border-box;/*chrome*/
+        -moz-box-sizing: border-box;/*firefox*/
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+
+    .content #baidu_img_phone {
+        display: block;
+        width: 175px;
+        height: 55px;
+        margin:0 auto;
+        padding-top:17px;
+    }
+
+    .content #text1 {
+        width: 97.25%;
+        height: 40px;
+        padding-left: 5px;
+    }
+
+    .content #submit1 {
+        width: 26.01%;
+        height: 42px;
+    }
+    .main_index #drop-down {
+        top: -67px;
+    }
+
+    .main_index #drop-down, .commonly_used_web #c_u_aid, .content .commonly_used_web .c_u_web {
+        background-color: #ffffff;
+        display: block;
+    }
+    .commonly_used_web .main_index {
+      border:none;
+        width: 100%;
+    }
+
+    .main_index #drop-down .real-time-news {
+        top: 39px;
+        left: 0;
+        width: 100%;
+        margin-top: -25px;
+    }
+
+    .main_index #drop-down .real-time-news .real-time-title .change {
+        width: 100px;
+        top: -6px;
+        right: -10px;
+    }
+    .main_index #drop-down .real-time-news .real-time-title .change_text .change-a-num{
+        display: inline-block;
+    }
+
+    .main_index #drop-down .real-time-news .real-time-title .icon-edit {
+        display: inline-block;
+        margin-left: 8px;
+        height: 11px;
+    }
+
+    .main_index #drop-down .real-time-news #hot-series li {
+        display: inline-block;
+        padding-left: 20px;
+        height: 42px;
+        line-height: 42px;
+        width: 43%;
+    }
+
+
+     .main_index #drop-down .real-time-news .hot-news {
+        font-weight: normal;
+         color:#999;
+
+    }
+    .main_index #drop-down .real-time-news #hot-series {
+        height: 160px;
+        overflow: hidden;
+        margin-top: -10px;
+
+    }
+    .footerthird,.footerthird p , .footerthird #police_record{
+        width: 100%;
+        text-align: center;
+    }
+    .footer  .footerthird  #reading_beforeU{
+        text-decoration: none;
+    }
+    .footerthird p #icp_num {
+      margin-left:-8px;
+    }
+}
+
+
+
+
