@@ -1,0 +1,1461 @@
+$margin: 0;
+$padding: 0;
+$fontSize: 12px;
+$width: 1000px;
+$text-decoration: none;
+$fontFamily: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;
+@mixin margin_padding($margin:0 0 0 0 , $padding:0 0 0 0) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin width_height($width:0, $height:0) {
+  width: $width;
+  height: $height;
+}
+
+@mixin position1($position:absolute, $top:0px,$left:0px,$width:100%) {
+  position: $position;
+  top: $top;
+  left: $left;
+  width: $width;
+}
+
+@mixin position2($position:absolute, $top:0px,$right:0px) {
+  position: $position;
+  top: $top;
+  right: $right;
+}
+
+@mixin a($display:inline-block,$textAlign:center,$verticalAlign:middle,$width:100%) {
+  display: $display;
+  text-align: $textAlign;
+  vertical-align: $verticalAlign;
+  width: $width;
+}
+
+@mixin displayInlineBlock($display:inline-block, $padding:0 0 0 0) {
+  display: $display;
+  padding: $padding;
+}
+
+@mixin height_lineheight($width:100%,$height:10px,$line-height:10px) {
+  width: $width;
+  height: $height;
+  line-height: $line-height;
+}
+
+@mixin lineheight($height:10px,$line-height:10px) {
+  height: $height;
+  line-height: $line-height;
+}
+
+@mixin border_back($border:1px solid #ccc,$background:#fff) {
+  border: $border;
+  background: $background;
+}
+
+@mixin box-sizing($box-sizing:border-box) {
+  -webkit-box-sizing: $box-sizing;
+  -moz-box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
+}
+
+@mixin box-shadow($shadow:0 0 0 #fff) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin box-radius($radius:0) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin rotateY($rotateY:rotateY(0deg)) {
+  -moz-transform: $rotateY;
+  -webkit-transform: $rotateY;
+  -ms-transform: $rotateY;
+  transform: $rotateY;
+  backface-visibility: hidden;
+}
+
+@mixin color_font($color:#999,$font-size:12px) {
+  color: $color;
+  font-size: $font-size
+}
+
+@mixin borders($border-top:1px solid #00C800,$border-right: 1px solid #00C800,$border-bottom: 1px solid #00C800,$border-left: 1px solid #00C800) {
+  border-top: $border-top;
+  border-right: $border-right;
+  border-bottom: $border-bottom;
+  border-left: $border-left;
+}
+
+%carousel_controls1 {
+  @include height_lineheight($width: 20px, $height: 40px, $line-height: 30px);
+  background-color: #000;
+}
+
+%a1 {
+  text-decoration: $text-decoration;
+  font-size: 12px;
+  height: 30px;
+  display: inline-block;
+}
+
+%a2 {
+  @include displayInlineBlock($display: block, $padding: 0 0 0 15px);
+  @include height_lineheight($width: 75px, $height: 25px, $line-height: 25px);
+  text-align: left;
+  color: #00C800;
+  background-image: linear-gradient(to top, #F8F8F8, #F8F8F8);
+}
+
+%a3 {
+  color: #00C800;
+  text-decoration: $text-decoration;
+}
+
+%white-space {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+%carousel-control {
+  @include box-radius;
+  @include height_lineheight($width: 40px, $height: 50px, $line-height: 40px);
+  border: none;
+  color: #fff;
+  display: none;
+}
+
+%body {
+  @include margin_padding;
+  font-family: $fontFamily;
+}
+
+body {
+  @extend %body;
+}
+
+#container {
+  @extend %body;
+  @include width_height($width: 100%, $height: 100%);
+  font-size: 14px;
+  overflow: hidden;
+}
+
+/*head vip-obtain部分。。。。。。。。。。。。*/
+#container {
+  .head {
+    width: $width;
+    margin: 0 auto;
+    .vip-obtain {
+      @include position1(relative);
+      margin-top: 10px;
+      background-color: #fff9df;
+      .icon-delete {
+        @include position2($top: 10px, $right: 6px);
+        @include color_font($color: #c67605, $font-size: 20px);
+        cursor: pointer;
+      }
+      p {
+        @include displayInlineBlock($display: block, $padding: 10px 60px 10px 10px);
+        a {
+          @include a;
+          text-decoration: $text-decoration;
+          @include height_lineheight;
+          color: gray;
+          .vip-inner-txt {
+            color: #FF6661;
+          }
+        }
+      }
+    }
+  }
+}
+
+.head {
+  .search-wrapper {
+    @include position1(relative);
+    padding-top: 16px;
+    padding-bottom: 14px;
+    .logo-jk img {
+      width: 114px;
+    }
+    .search-form-box {
+      @include displayInlineBlock($padding: 0);
+      @include position1($position: relative, $width: auto);
+      margin-left: 180px;
+      .search-form {
+        margin: $margin;
+        .search-input {
+          @include displayInlineBlock($padding: 10px 134px 10px 10px);
+          @include border_back;
+          border-right: 0;
+          @include box-sizing;
+          @include width_height($width: 330px, $height: 40px);
+          @include width_height($width: 330px, $height: 40px);
+          .search-ipt {
+            border: none;
+            @include margin_padding;
+            outline: none;
+            @include box-shadow(none);
+            @include height_lineheight($height: 100%, $line-height: 100%)
+          }
+
+        }
+        .search-btn {
+          @include a($verticalAlign: bottom);
+          @include height_lineheight($width: 40px, $height: 40px, $line-height: 36px);
+          @include border_back($background: #fff);
+          margin-left: -4px;
+          outline: none;
+          @include box-shadow(none);
+        }
+        .icon-magnifying-glass {
+          display: inline-block;
+          @include position2($position: absolute, $top: 13px, $right: 15px);
+          @include color_font($color: #000, $font-size: 20px);
+
+        }
+        .ipt-inner-place {
+          display: inline-block;
+          @include position2($position: absolute, $top: 13px, $right: 46px);
+          .inner-place-txt {
+            background: #F7F7F7;
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
+.search-form-box {
+  .search-form {
+    .search-ipt {
+      &::-webkit-input-placeholder {
+        @include color_font;
+      }
+      &:-ms-input-placeholder {
+        @include color_font;
+        /* IE10 +*/
+      }
+      &:-moz-placeholder {
+        @include color_font;
+        /* Firefox4-18 */
+      }
+      &::-moz-placeholder {
+        @include color_font;
+        /*Firefox19 +*/
+      }
+    }
+  }
+}
+
+.search-wrapper {
+  .vip-service-box {
+    display: inline-block;
+    @include position2($position: absolute, $top: 26px, $right: 0);
+    vertical-align: baseline;
+    a {
+      @extend %a1;
+      &:hover {
+        @extend %a1;
+      }
+      &:active {
+        @extend %a1;
+      }
+      .icon-message {
+        @include color_font($color: #000, $font-size: 14px);
+      }
+    }
+    .icon-vertical-line {
+      font-size: 12px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .vip-level {
+      @include a($width: 40px);
+      @include lineheight($height: 16px, $line-height: 16px);
+      @include color_font($color: #fff, $font-size: 12px);
+      background-color: #5AB6FF;
+      margin-left: -2px;
+    }
+    .dropdown {
+      display: inline-block;
+      .dropdown-menu {
+        @include position1($position: absolute, $top: 25px, $left: 14px, $width: 90px);
+        min-width: 90px;
+        @include box-radius;
+        li {
+          padding: $padding;
+          width: 100%;
+          a {
+            @extend %a2;
+            color: #333;
+            background: #fff;
+            &:hover {
+              @extend %a2;
+            }
+            &:active {
+              @extend %a2;
+            }
+          }
+        }
+
+      }
+    }
+    .vip-customer {
+      color: #00C800;
+      margin: 0 4px;
+      font-weight: bold;
+      .icon-down {
+        font-weight: bold;
+      }
+      .icon-to-up {
+        font-weight: bold;
+        display: none;
+      }
+    }
+    .vip-msg-change {
+      @include color_font($color: #6187FF, $font-size: 12px);
+    }
+  }
+}
+
+/*头部与内容部分的分界线。。。。。。*/
+.hr-line {
+  @include width_height($width: 100%);
+  border-bottom: 2px solid #00C800;
+}
+
+/*内容部分开始。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。*/
+.content {
+  position: relative;
+}
+
+.content {
+  .career-path-diagram, .knowledge-system, .course-high-quality, .books-wiki,
+  .enterprise-important-co, .college-cooperation, .media-report {
+    width: $width;
+    margin: 0 auto 25px;
+
+  }
+  .content {
+    .course-high-quality, .books-wiki, .enterprise-important-co, .college-cooperation,
+    .media-report {
+      margin-top: 40px;
+    }
+  }
+  .career-path-title, .k-s-title, .c-h-title, .b-k-title, .e-i-title,
+  .c-co-title, .m-r-title {
+    @include height_lineheight($width: 100%, $height: 17px, $line-height: 17px);
+    margin: 20px auto;
+    vertical-align: middle;
+    font-size: 12px;
+  }
+  .career-path-title .tile-text, .k-s-title .tile-text, .c-h-title .tile-text, .b-k-title .tile-text, .e-i-title .tile-text,
+  .c-co-title .tile-text, .m-r-title .tile-text {
+    @include color_font($color: #333, $font-size: 20px);
+    display: inline-block;
+    vertical-align: top;
+  }
+  .career-path-title .help, .k-s-title .help, .c-h-title .help, .b-k-title .help {
+    @include a($verticalAlign: top, $width: 14px);
+    @include lineheight($height: 14px, $line-height: 14px);
+    background-color: #666;
+    @include box-radius(50%);
+    color: #fff;
+  }
+  .career-path-title .help-txt, .k-s-title .help-txt, .c-h-title .help-txt, .b-k-title .help-txt {
+    @include position1($position: relative, $top: -2px, $left: 4px, $width: 100%);
+    display: inline-block;
+    vertical-align: top;
+    display: none;
+  }
+  .career-path-title .help-txt .title-sj, .k-s-title .help-txt .title-sj, .c-h-title .help-txt .title-sj, .b-k-title .help-txt .title-sj {
+    @include position1($top: 3px, $left: -4px);
+    position: absolute;
+    z-index: 2;
+  }
+  .career-path-title .help-txt .txt, .k-s-title .help-txt .txt, .c-h-title .help-txt, .b-k-title .help-txt {
+    border: 1px solid #DCDCDC;
+  }
+  .career-path-title .career-more, .k-s-title .knowledge-more, .c-h-title .course-high-more, .b-k-title .books-wiki-more,
+  .e-i-title .enterprise-co-more, .c-co-title .college-co-more, .m-r-title .media-report-more {
+    float: right;
+  }
+  .enterprise-important-co .enterprise-wrapper, .media-report .m-r-con {
+    border: 1px solid #DCDCDC;
+    height: 90px;
+    padding: 20px;
+    @include box-sizing;
+  }
+  .enterprise-wrapper .enterprise-box .carousel-inner a, .media-report .m-r-con .carousel-inner a {
+    float: left;
+    display: block;
+    margin-left: 0;
+    width: 159px;
+    text-align: center;
+    @include box-sizing;
+    img {
+      border: 1px solid #DCDCDC;
+      height: 48px;
+      display: inline-block;
+    }
+  }
+  #myCarousel3 .carousel-control, #myCarousel4 .carousel-control, #myCarousel5 .carousel-control {
+    @include box-radius;
+    width: 27px;
+    display: none;
+  }
+  #myCarousel3 .carousel-control.left, #myCarousel4 .carousel-control.left, #myCarousel5 .carousel-control.left {
+    left: -9px;
+  }
+  #myCarousel3 .carousel-control.right, #myCarousel4 .carousel-control.right, #myCarousel5 .carousel-control.right {
+    right: 2px;
+    width: 24px;
+  }
+}
+
+.content {
+  .top-indexs {
+    @include width_height($width: 100%, $height: 40px);
+    @include displayInlineBlock($padding: 0 0 0 115px);
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    @include box-shadow($shadow: 0 0 3px #ccc);
+    .top-index-items {
+      @include width_height($width: 755px, $height: 40px)
+    }
+    a {
+      color: #333;
+      &:hover {
+        @extend %a3;
+      }
+    }
+    .top-index-item {
+      float: left;
+      list-style-type: none;
+      @include height_lineheight($width: 113px, $height: 40px, $line-height: 40px);
+      text-align: center;
+    }
+
+  }
+  .top-links {
+    display: inline-block;
+    @include position2($position: absolute, $top: 12px, $right: 180px);
+    .top-link {
+      a {
+        @include color_font($color: #333, $font-size: 12px);
+        margin-left: 20px;
+        &:hover {
+          @extend %a3;
+        }
+        .icon-fill {
+          font-size: 16px;
+        }
+        img {
+          @include position2($top: -10px, $right: -14px);
+          width: 15px;
+        }
+      }
+      .vip-word {
+        background-color: #ff0000;
+        @include color_font($color: #fff, $font-size: 12px);
+      }
+    }
+  }
+}
+
+/*首页 职业课程等的滑过显示菜单*/
+.content {
+  .top-indexs-dropdown {
+    @include position1($top: 40px, $left: 173px, $width: 1000px);
+    @include border_back($border: 1px solid #ccc, $background: #fff);
+    height: 170px;
+    display: none;
+    z-index: 8;
+    div {
+      @include a($textAlign: center, $verticalAlign: top, $width: 97px);
+      margin-left: 10px;
+      ul {
+        margin: $margin;
+        li {
+          @include margin_padding($margin: 10px 0 0 0, $padding: 0 0 0 20px);
+          list-style-type: none;
+          font-size: 12px;
+          a {
+            color: #666;
+            &:hover {
+              @extend %a3;
+            }
+          }
+        }
+      }
+    }
+    .t-i-home {
+      width: 50px;
+    }
+  }
+}
+
+/*左边导航栏部分。。。。。。。。*/
+.content {
+  .left-aside-box {
+    width: $width;
+    margin: 15px auto;
+    .span4 {
+      margin: 0;
+      width: 212px;
+    }
+    #menu {
+      @include position1($position: relative, $top: 0px, $left: 0px, $width: 100%);
+      margin: 0;
+      @include borders($border-right: none, $border-bottom: none, $border-left: none);
+      z-index: 6;
+      font-family: $fontFamily;
+      .left_aside_items {
+        @include height_lineheight($width: 100%, $height: 35px, $line-height: 35px);
+        font-size: 13px;
+        .aside-title {
+          @include a($textAlign: center, $verticalAlign: middle, $width: 190px);
+          @include margin_padding($margin: 0, $padding: 0 0 0 20px);
+          color: #333;
+          @include borders($border-top: none, $border-right: 1px solid #E4E4E4, $border-bottom: 1px solid #E4E4E4, $border-left: 1px solid #E4E4E4);
+          &:hover {
+            color: #00C800;
+            @include borders($border-top: none, $border-right: none, $border-bottom: 1px solid #E4E4E4, $border-left: 1px solid #00C800);
+            text-decoration: $text-decoration;
+          }
+          &:active {
+            color: #00C800;
+            @include borders($border-top: none, $border-right: none, $border-bottom: none, $border-left: 1px solid #00C800);
+          }
+        }
+        .mobile-develop-title {
+          border-top: 1px solid #00C800;
+        }
+        .left_aside_item {
+          @include position1($top: -1px, $left: 187px, $width: 380px);
+          min-height: 350px;
+          padding-left: 20px;
+          @include borders($border-top: 1px solid #E4E4E4, $border-right: 1px solid #E4E4E4, $border-bottom: 1px solid #E4E4E4, $border-left: none);
+          z-index: 2;
+          background-color: #fff;
+          display: none;
+          &:hover {
+            @include borders($border-top: 1px solid #E4E4E4, $border-right: 1px solid #E4E4E4, $border-bottom: 1px solid #E4E4E4, $border-left: none);
+           $background: #fff
+          }
+          .sub_menu_items {
+            .sub_menu_item {
+              @include height_lineheight($width: 100%, $height: 40px, $line-height: 40px);
+              border-bottom: 1px solid #E4E4E4;
+
+            }
+            .icon-vertical-line {
+              @include a($verticalAlign: middle, $width: 6px);
+              margin-left: -2px;
+              line-height: 16px;
+              color: #DCDCDC;
+            }
+            a {
+              @include color_font($color: #333, $font-size: 14px);
+              &:hover {
+                text-decoration: $text-decoration;
+                color: #00C800;
+              }
+            }
+          }
+        }
+        &:hover {
+          background-color: #fff;
+        }
+        a:hover {
+          color: #00C800;
+        }
+      }
+    }
+    ul {
+      li {
+        list-style-type: none;
+        padding: 0;
+      }
+    }
+  }
+}
+
+/*content轮播部分开始。。。。。。*/
+
+.content {
+  .middle-con-box {
+    width: 768px;
+    .middle-con-left {
+      display: inline-block;
+      margin-left: -10px;
+    }
+    #myCarousel {
+      width: 560px;
+      position: relative;
+      #carousel_indicators {
+        @include position1($top: 245px, $left: 33%);
+      }
+      .choice-line {
+        @include width_height($width: 35px, $height: 2px);
+        @include box-radius;
+        margin-left:10px;
+      }
+      .active {
+        background-color: #00C800;
+      }
+      .carousel-control {
+        @extend %carousel-control;
+      }
+      .carousel-control.left {
+        left: 0;
+      }
+      .carousel-control.right {
+        right: 0;
+      }
+
+    }
+
+  }
+}
+
+/*middle_con 左下角的切换效果图*/
+
+.content {
+  #middle_con {
+    #myCarousel2 {
+      @include width_height($width: 560px, $height: 84px);
+      border: 1px solid #E4E4E4;
+      vertical-align: bottom;
+      padding: 5px 27px;
+      @include box-sizing;
+      .carousel-inner-box {
+        position: relative;
+        overflow: hidden;
+        height: 72px;
+      }
+      .carousel-control {
+        @extend %carousel-control;
+      }
+      #carousel_controls2 {
+        @extend %carousel_controls1;
+      }
+      @at-root #myCarousel2.carousel {
+        margin: -11px 0 0 0;
+        overflow: hidden;
+        height: 84px;
+      }
+      .carousel-inner {
+        @include position2;
+        @include width_height($width: 840px, $height: 72px);
+      }
+      .item-con1 {
+        @include a;
+        font-size: 12px;
+        cursor: pointer;
+        float: left;
+        @include position1($width: 168px);
+        &:hover {
+          text-decoration: $text-decoration;
+        }
+      }
+      @for $i from 1 through 5 {
+        #myCarousel2_a#{$i} {
+          left: 168px * ($i - 1)
+        }
+      }
+      p {
+        width: 100%;
+        color: #666;
+      }
+      img {
+        width: 35px;
+        display: inline-block;
+      }
+      #carousel_controls1 {
+        @extend %carousel_controls1;
+      }
+      #carousel_controls1.left {
+        left: -6px;
+        width: 27px;
+      }
+    }
+  }
+}
+
+/*右边资讯部分。。。。。。。。。。。。。。。。。。。。。。*/
+.r-links {
+  .icon-quesans, .icon-wiki, .icon-videocour, .icon-Community,
+  .icon-sort, .icon-novel, .icon-occupation, .icon-crown {
+    @include color_font($color: #666, $font-size: 16px);
+  }
+  .icon-dowm-arrow {
+    color: #ccc;
+  }
+  .icon-quesans, .icon-novel, .icon-occupation, .icon-crown {
+    font-size: 24px;
+  }
+
+}
+
+.help-links-back {
+  .tab-content {
+    #question p, #Wiki div p, #community .community-con p {
+      @extend %white-space;
+      font-size: 12px;
+    }
+    #Wiki, .help-links-back .tab-content #community .community-con {
+      @include box-sizing;
+      padding-top: 3px;
+    }
+  }
+}
+
+%news-flash {
+  @include margin_padding($margin: 0, $padding: 10px 0 10px 20px);
+  border: 1px solid #DCDCDC;
+  font-size: 12px;
+
+}
+
+.left-aside-box {
+  .middle-con-box {
+    .aside-info {
+      @include a($display: inline-block, $textAlign: center, $verticalAlign: top, $width: 208px);
+      margin-left: 3px;
+      .news-flash {
+        @extend %news-flash;
+        text-align: left;
+        .title {
+          font-size: 14px;
+          margin-bottom: 7px;
+        }
+        .books-free a {
+          color: #ff0000;
+        }
+      }
+      .log-register {
+        @extend %news-flash;
+        img {
+          @include a($verticalAlign: top, $width: 40px);
+          margin-left: -10px;
+        }
+        .member-person-area {
+          @include a($verticalAlign: top, $width: auto);
+        }
+        .vip-name {
+          @include a($verticalAlign: bottom, $width: 60px);
+          color: #6187FF;
+          @extend %white-space
+        }
+        .member-person-area .vip-free {
+          color: #ff0000;
+          background-color: #FCAEAD;
+          width: 60px;
+          text-align: center;
+        }
+
+      }
+      .relative-help-links {
+        @extend %news-flash;
+        padding: 0;
+        height: 154px;
+        border: none;
+        position: relative;
+        .r-links-top {
+          height: 65px;
+        }
+        .r-links {
+          @include borders($border-top: none, $border-right: 1px solid #DCDCDC, $border-bottom: 1px solid #DCDCDC, $border-left: none);
+          @include height_lineheight($width: 25%, $height: 64px, $line-height: 17px);
+          float: left;
+          overflow: hidden;
+          @include box-sizing;
+          padding: 12px 10px;
+          span {
+            @include a;
+          }
+        }
+        .r-links-bottom {
+          height: 77px;
+          .r-links {
+            line-height: 23px;
+          }
+        }
+        .r-links-2 {
+          border-left: 1px solid #DCDCDC;
+        }
+        .help-links-back {
+          @include position1($width: 208px);
+          border: 1px solid #DCDCDC;
+          display: none;
+          ul {
+            margin: 0;
+          }
+          li {
+            a {
+              @include box-radius;
+              @include margin_padding($margin: 0, $padding: 0 12px);
+              @include width_height($width: 25, $height: 20);
+              &:hover {
+                color: #00C800;
+              }
+              span {
+                @include width_height($width: 100%, $height: 100%);
+                @extend %white-space;
+              }
+            }
+            a.tab-community {
+              width: 27px;
+            }
+          }
+          .tab-content {
+            #question {
+              @include box-radius;
+              padding: 0 10px;
+              line-height: 19px;
+              img {
+                width: 16px;
+              }
+            }
+            #Wiki {
+              div {
+                @include a($verticalAlign: top, $width: 30%);
+                margin-left: 3px;
+                img {
+                  width: 90%;
+                }
+              }
+            }
+            #course {
+              div {
+                @include a($verticalAlign: middle, $width: 49%);
+                img {
+                  width: 29px;
+                  margin-top: 1px;
+                }
+              }
+            }
+            #community {
+              .community-con {
+                height: 52px;
+                img {
+                  width: 30px;
+                }
+                div {
+                  display: inline-block;
+                  vertical-align: bottom;
+
+                }
+                p {
+                  @include height_lineheight($width: 87px, $height: 15px, $line-height: 15px);
+                  margin: 0 5px;
+                }
+                .btn-primary {
+                  @include margin_padding($margin: 0, $padding: 0 4px);
+                  font-size: 12px;
+                  background-color: #FF4A00;
+                  background-image: linear-gradient(to top, #FF4A00, #FF4A00);
+                }
+              }
+            }
+          }
+        }
+      }
+      p {
+        margin-bottom: 2px;
+      }
+      a {
+        color: #666;
+        &:active {
+          @extend %a3
+        }
+        span:active {
+          @extend %a3
+        }
+
+      }
+    }
+  }
+
+}
+
+/*content main部分*/
+.content {
+  .main-con-items {
+    width: $width;
+    margin: 0 auto;
+    z-index: 5;
+    #myTab2 {
+      border-bottom: 1px solid #F5F5F5;
+      li {
+        width: 16.667%;
+        a {
+          @include a($verticalAlign: middle);
+          height: 100%;
+          border: none;
+          color: #666;
+          &:hover {
+            @extend %a3;
+          }
+        }
+      }
+    }
+    .tab-content {
+      height: 555px;
+      .r-h-item {
+        @include box-sizing;
+        @include a($verticalAlign: middle, $width: 23.39%);
+        font-size: 12px;
+        position: relative;
+        margin-left: 21px;
+        margin-bottom: 20px;
+        float: left;
+        height: 215px;
+        .item-hover-bg {
+          @include position1;
+          @include a($display: none);
+          @include lineheight($height: 123px, $line-height: 123px);
+          background: rgba(0, 0, 0, .4);
+          .player {
+            width: 50px;
+          }
+          .like {
+            @include position1($top: 20px, $left: 20px, $width: 20px)
+          }
+        }
+        .item-info {
+          @include position1($top: 123px, $width: 227px);
+          @include border_back($border: 1px solid #DCDCDC, $background: #fff);
+          padding-left: 5px;
+          opacity: 1;
+          z-index: 200;
+        }
+        h5 {
+          @include lineheight($height: 35px, $line-height: 15px);
+          font-size: 13px;
+          font-weight: normal;
+          margin: 5px 0;
+          text-align: left;
+          a {
+            color: #666;
+          }
+        }
+        .title-notes {
+          text-align: left;
+          height: 60px;
+          overflow: hidden;
+          display: none;
+
+        }
+        .r-h-sub-info {
+          margin-top: 8px;
+          span {
+            @include a($textAlign: left, $verticalAlign: middle, $width: 50%);
+            margin-top: 2px;
+            float: left;
+          }
+          img {
+            width: 15px;
+          }
+          .right {
+            text-align: right;
+            width: 38%;
+            float: right;
+            padding-right: 10px;
+          }
+          .count, .level {
+            display: none;
+          }
+        }
+      }
+      .r-h-item.r-h-item2 {
+        margin-left: 1px;
+      }
+    }
+  }
+}
+
+/*职业路径图开始.......................................*/
+.content {
+  .career-path-diagram {
+    margin-top: -75px;
+    .learn-item {
+      @include a($width: 20%);
+      @include box-sizing;
+      @include color_font($color: #666, $font-size: 16px);
+      @include borders($border-top: 1px solid #DCDCDC, $border-right: none, $border-bottom: 1px solid #DCDCDC, $border-left: 1px solid #DCDCDC);
+      height: 300px;
+      padding-right: 1px;
+      margin-right: -5px;
+      &:hover {
+        text-decoration: none;
+      }
+      .item-title-txt {
+        @include lineheight($height: 32px, $line-height: 32px);
+        font-size: 15px;
+        margin: 18px 0 12px;
+      }
+      p {
+        margin: 0;
+        font-size: 12px;
+      }
+      .learnBtn {
+        @include width_height($width: 140px, $height: 32px);
+        @include border_back($border: 1px solid #00C800, $background: #f3fff6);
+        @include color_font($color: #00C800, $font-size: 16px);
+        margin-top: 20px;
+        font-family: $fontFamily;
+      }
+    }
+    .learn-item.learn-item2 {
+      border-right: 1px solid #DCDCDC;
+    }
+    .learn-item.learn-item3 {
+      @include borders($border-top: none, $border-right: none, $border-bottom: 1px solid #DCDCDC, $border-left: 1px solid #DCDCDC);
+    }
+    .learn-item.learn-item4{
+      border-right: 1px solid #DCDCDC;
+    }
+    .learn-item4 .learnBtn {
+      @include border_back($border: 1px solid #ccc, $background: #dcdcdc);
+      color: #666;
+    }
+  }
+
+}
+
+.content .knowledge-system {;
+  overflow: hidden;
+}
+
+.knowledge-system .k-s-box {
+  @include borders($border-top: 1px solid #DCDCDC, $border-right: none, $border-bottom: 1px solid #DCDCDC, $border-left: 1px solid #DCDCDC);
+  @include box-sizing;
+  @include width_height($width: 16.667%, $height: 122px);
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  float: left;
+  @at-root .k-s-box.k-s-box2 {
+    border-right: 1px solid #DCDCDC;
+  }
+  @at-root .k-s-box.k-s-box3 {
+    @include borders($border-top: none, $border-right: 1px solid #DCDCDC, $border-bottom: 1px solid #DCDCDC, $border-left: 1px solid #DCDCDC);
+  }
+  .con-front {
+    padding-top: 17px;
+    width: 100%;
+    display: inline-block;
+    @include rotateY;
+    transition: transform 1s;
+    .front-txt1 {
+      @include color_font($color: #000, $font-size: 15px);
+      line-height: 25px;
+      margin: 0;
+    }
+    .front-txt2 {
+      color: #00C800;
+      line-height: 25px;
+      margin: 0;
+    }
+
+  }
+  .front-img {
+    width: 40px;
+  }
+  .con-back {
+    padding-top: 32px;
+    height: 88px;
+    background-color: #F0F0F0;
+    @include position1;
+    display: none;
+    @include rotateY(rotateY(180deg));
+    transition: transform 1s;
+    .back-txt {
+      color: #333;
+    }
+    .backBtn {
+      @include width_height($width: 140px, $height: 36px);
+      @include color_font($color: #fff, $font-size: 16px);
+      @include border_back($border: 0, $background: #007A00);
+    }
+  }
+}
+
+.content .course-high-quality {
+  .course-high-con {
+    @include box-sizing;
+    @include width_height($width: 235px, $height: 261px);
+    @include margin_padding($margin: 0 0 15px, $padding: 16px);
+    border: 1px solid #DCDCDC;
+    position: relative;
+    display: inline-block;
+  }
+  .course-high-con1 {
+    margin-left: 0;
+  }
+}
+
+.course-high-con {
+  .course-front {
+    @include width_height($width: 201px, $height: 226px);
+    .con-title {
+      margin-top: 0;
+      @extend %white-space;
+    }
+    .con-img {
+      @include width_height($width: 201px, $height: 160px);
+    }
+    .con-lesson {
+      font-size: 12px;
+      margin-top: 16px;
+      .student-num {
+        margin-left: 4px;
+      }
+    }
+    .btn-success {
+      padding-top: 0;
+      padding-bottom: 0;
+      float: right;
+      font-size: 12px;
+    }
+  }
+}
+
+.course-back {
+  text-align: center;
+  font-size: 13px;
+  @include position1($width: 230px);
+  @include box-sizing;
+  height: 203px;
+  padding: 16px 16px 16px 18px;
+  display: none;
+  a {
+    color: #666;
+    &:hover {
+      @extend %a3;
+    }
+  }
+  .teacher-pic img {
+    @include box-radius(50%);
+    width: 50px;
+  }
+  .teaching-description {
+    @include lineheight($height: 38px, $line-height: 18px);
+    overflow: hidden;
+    font-size: 12px;
+  }
+  .btnBox .btn-success {
+    @include margin_padding($margin: 20px 0 0, $padding: 0 20px);
+    color: #fff;
+    font-family: $fontFamily;
+  }
+}
+
+/*Wiki部分。。。。。。。。。*/
+.content .books-wiki {
+  overflow: hidden;
+}
+
+.b-w-con .left a, .b-w-con .right a, .b-w-con .other-book-item a {
+  color: #999;
+}
+
+.books-wiki {
+  .b-w-con {
+    @include borders($border-top: 1px solid #DCDCDC, $border-right: none, $border-bottom: 1px solid #DCDCDC, $border-left: 1px solid #DCDCDC);
+    @include box-sizing;
+    @include width_height($width: 33.3%, $height: 370px);
+    font-size: 12px;
+    padding: 5px 16px;
+    float: left;
+    .left, .right {
+      display: inline-block;
+      font-size: 13px;
+      position: relative;
+    }
+    .right {
+      margin-left: 9px;
+    }
+    .book-pic {
+      display: inline-block;
+      background-color: #aaa;
+      @include box-radius(3%);
+      @include width_height($width: 140px, $height: 200px);
+    }
+    .left img, .right img {
+      @include width_height($width: 140px, $height: 200px);
+      @include box-radius(3%);
+      -webkit-transition: transform 1s ease-in-out;
+      -moz-transition: transform 1s ease-in-out;
+      transition: transform 1s ease-in-out;
+    }
+    .left a .book-name1, .right a .book-name1 {
+      @extend %white-space;
+      @include margin_padding($margin: 6px 0 5px, $padding: 0 0 5px);
+      color: #333;
+      width: 135px;
+    }
+    .book-name1.book-name3 {
+      width: 120px;
+      padding-left: 15px;
+      text-align: center;
+    }
+    .left .book-info1, .right .book-info1 {
+      text-align: center;
+      margin-bottom: 6px;
+      margin-top: 5px;
+    }
+    .look {
+      background: url(../images/look_d293d44.png) no-repeat;
+      display: inline-block;
+      @include position2($position: absolute, $top: -12px, $right: -10px);
+      @include width_height($width: 40px, $height: 40px);
+      background-size: 100%;
+      display: none;
+    }
+    .other-books {
+      margin-left: 12px;
+      .book-info2 {
+        float: right;
+      }
+    }
+    a:hover, a:hover .book-name1 {
+      @extend %a3;
+    }
+  }
+  .b-w-con2 {
+    border-right: 1px solid #DCDCDC
+  }
+}
+
+/*战略合作企业。。。。。。。。。。。*/
+
+.enterprise-important-co {
+  .enterprise-wrapper {
+    #myCarousel3 {
+      overflow: hidden;
+      position: relative;
+      @include width_height($width: 958px, $height: 50px);
+    }
+  }
+}
+
+.enterprise-wrapper {
+  .enterprise-box {
+    .carousel-inner {
+      @include position1($left: -795px, $width: 2544px)
+    }
+  }
+
+}
+
+/*合作院校。。。。。。。。。。。*/
+.content .college-cooperation {
+  .c-co-con {
+    border: 1px solid #DCDCDC;
+    height: 150px;
+    padding: 19px 22px;
+    @include box-sizing;
+  }
+}
+
+.c-co-con {
+  #myCarousel4 {
+    @include width_height($width: 954px, $height: 110px);
+    overflow: hidden;
+    position: relative;
+  }
+  .carousel-inner {
+    @include position1($left: -636px, $width: 2067px);
+    a {
+      float: left;
+      display: block;
+      margin-left: 0;
+      width: 159px;
+      text-align: center;
+      @include box-sizing;
+      img {
+        @include width_height($width: 110px, $height: 110px);
+        display: inline-block;
+      }
+    }
+  }
+}
+
+/*媒体报道部分。。。。。。*/
+.media-report {
+  #myCarousel5 {
+    overflow: hidden;
+    height: 50px;
+    .carousel-inner {
+      @include position1($left: -636px, $width: 2226px);
+    }
+  }
+}
+
+/*foot部分。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。*/
+.foot {
+  @include width_height($width: 100%, $height: 300px);
+  background-color: #F5F5F5;
+  .foot-wrapper {
+    @include borders($border-top: 1px solid #E4E4E4, $border-right: none, $border-bottom: 1px solid #E4E4E4, $border-left: none);
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}
+
+.foot-wrapper {
+  div {
+    float: left;
+    p {
+      margin: 0;
+    }
+  }
+  .other-info-links {
+    margin-top: 25px;
+    div {
+      width: 184px;
+      border-left: 1px solid #E4E4E4;
+      padding-left: 25px;
+      @include box-sizing;
+      ul {
+        margin-left: 19px;
+      }
+      a {
+        color: #999;
+        &:hover {
+          @extend %a3;
+        }
+      }
+      li a {
+        font-size: 12px;
+
+      }
+    }
+  }
+}
+
+.foot .other-exchange-platform {
+  float: right;
+  width: 260px;
+  border-left: 1px solid #E4E4E4;
+  @include box-sizing;
+  padding: 25px;
+  a {
+    color: #999;
+  }
+  h4.title {
+    @include color_font($color: #00C800, $font-size: 15px);
+    margin: 0;
+  }
+  .cellphone {
+    margin-top: 14px;
+    .txt {
+      margin-top: -3px;
+    }
+    .cellphone-icon {
+      @include width_height($width: 27px, $height: 44px);
+      display: inline-block;
+      background: url(../images/iphone_ecb3977.png) no-repeat;
+      background-size: 80%;
+    }
+    h4 {
+      @include color_font($color: #666, $font-size: 18px);
+      margin: 3px;
+    }
+  }
+}
+
+.wayToCommunication a {
+  display: inline-block;
+  position: relative;
+  span {
+    @include width_height($width: 37px, $height: 40px);
+    display: inline-block;
+    background: url(../images/icon.png) no-repeat;
+  }
+  span.blog1 {
+    background-position: -21px 10px;
+  }
+  span.blog2, span.postBar2, span.WeChat2 {
+    @include position1($top: 7px);
+    display: none;
+  }
+  span.blog2 {
+    background-position: -21px -37px;
+  }
+  span.postBar1 {
+    background-position: -143px 10px;
+  }
+  span.postBar2 {
+    background-position: -143px -37px;
+    @include position1($top: 7px);
+    display: none;
+  }
+  span.WeChat1 {
+    background-position: -21px -73px;
+  }
+  span.WeChat2 {
+    background-position: -21px -115px;
+  }
+  span.erweima {
+    background: none;
+    @include width_height($width: 100px, $height: 100px);
+    @include position1($top: -121px, $left: -32px, $width: 100px);
+    display: none;
+  }
+}
+
+.other-exchange-platform {
+  .contact-us {
+    margin-left: -16px;
+    margin-top: 7px;
+    .head-icon {
+      display: inline-block;
+      @include width_height($width: 60px, $height: 60px);
+      background: url(../images/kefu_8edc734.png) no-repeat;
+      background-position: 13px 0;
+      background-size: 155%;
+    }
+    .txt {
+      display: inline-block;
+      font-size: 12px;
+    }
+  }
+  a:hover, a:hover h4 {
+    @extend %a3;
+  }
+}
+
+.foot .copyright {
+  @include width_height($width: 100%, $height: 60px);
+  @include color_font;
+  background-color: #F9F9F9;
+  p {
+    @include height_lineheight($width: $width, $height: 60px, $line-height: 60px);
+    margin: 0 auto;
+    text-align: center;
+    a {
+      color: #999;
+      &:hover {
+        @extend %a3;
+      }
+    }
+  }
+
+}
+
