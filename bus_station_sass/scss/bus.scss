@@ -1,0 +1,478 @@
+@charset "UTF-8";
+
+
+$padding-left: 20px;
+$font-family: "楷体", Arial, "雅黑","宋体";
+@mixin margin_padding($margin:0 0 0 0,$padding:0 0 0 0) {
+  margin: $margin;
+  padding: $padding;
+}
+@mixin scale($scale:scale(0.8)){
+  -moz-transform: $scale;
+  -webkit-transform: $scale;
+  -ms-transform: $scale;
+  transform: $scale;
+}
+@mixin width_height($width:0px, $height:0px) {
+  width: $width;
+  height: $height;
+}
+
+@mixin width_height_back($width:0px, $height:0px,$background-color:#fff) {
+  width: $width;
+  height: $height;
+  background-color: $background-color;
+}
+
+@mixin border-radius($border-radius:0 0 0 0) {
+  -moz-border-radius: $border-radius;
+  -webkit-border-radius: $border-radius;
+  border-radius: $border-radius;
+}
+@mixin rotate($rotate:rotate(0deg)){
+-moz-transform: $rotate;
+-webkit-transform: $rotate;
+-ms-transform: $rotate;
+transform: $rotate;
+}
+@mixin position($position:absolute,$left:0,$top:0,$width:100%) {
+  position: $position;
+  left: $left;
+  top: $top;
+  width: $width;
+}
+@mixin position2($position:absolute,$left:0,$top:0) {
+  position: $position;
+  left: $left;
+  top: $top;
+}
+%border-sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin font_textalign($font:12px,$text-align:center) {
+  font-size: $font;
+  text-align: $text-align;
+}
+
+@mixin height_lineheight($height:0px,$line-height:0px) {
+  height: $height;
+  line-height: $line-height;
+}
+
+@mixin font_letterspacing($font-size:12px,$letter-spacing:0px) {
+  font-size: $font-size;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin border($border-top:1px solid #fff,$border-right:1px solid #fff,$border-bottom:1px solid #fff,$border-left:1px solid #fff) {
+  border-top: $border-top;
+  border-right: $border-right;
+  border-bottom: $border-bottom;
+  border-left: $border-left;
+}
+@mixin display_height_width($display:inline-block,$height:100%,$width:100%){
+  display: $display;
+  height:$height;
+  width:$width;
+}
+%display {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body, p {
+  @include margin_padding($margin: 0, $padding: 0);
+  font-family: $font-family;
+}
+
+.container {
+  @include width_height_back($width: 600px, $height: 800px, $background-color: #384BFF);
+  @include position($position: absolute, $left: 50%, $top: 50%, $width: 600px);
+  @include margin_padding($margin: -300px 0 0 -400px, $padding: 10px);
+  @extend %border-sizing;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.inner-con-box {
+  background-color: #7183FF;
+  height: 100%;
+}
+/*地铁图标，公用*/
+.metro_icon {
+  @include width_height($width: 30px, $height: 30px);
+  @include  border-radius($border-radius:50%);
+  @include scale;
+  background-color: #008000;
+  position: relative;
+  margin-left:-10px;
+  .metro__1 {
+    @include width_height($width: 10px, $height: 0px);
+    display: inline-block;
+    @include position($left: 4px, $top: 17px, $width: 10px);
+    @include border-radius($border-radius: 10px 10px 0 0);
+    @include border($border-top: 10px solid #fff, $border-right: 10px solid #fff, $border-bottom: none, $border-left: none);
+  }
+
+  .metro__2 {
+    display: inline-block;
+    @include width_height($width: 7px, $height: 0px);
+    @include border($border-top: 7px solid #008000, $border-right: 7px solid #008000, $border-bottom: none, $border-left: none);
+    @include border-radius($border-radius: 7px 7px 0 0);
+    @include position($left: 7px, $top: 20px, $width: 7px);
+  }
+
+  .metro__3 {
+    display: inline-block;
+    @include width_height($width: 10px, $height: 0px);
+    @include border($border-top: none, $border-right: none, $border-bottom: 10px solid #fff, $border-left: 10px solid #fff);
+    @include border-radius($border-radius: 0 0 10px 10px);
+    @include position($left: 4px, $top: 4px, $width: 10px);
+  }
+
+  .metro__4 {
+    display: inline-block;
+    @include width_height($width: 7px, $height: 0px);
+    @include border($border-top: none, $border-right: none, $border-bottom: 7px solid #008000, $border-left: 7px solid #008000);
+    @include border-radius($border-radius: 0 0 7px 7px);
+    @include position($left: 8px, $top: 5px, $width: 7px);
+    @include border-radius($border-radius: 0 0 7px 7px);
+    @include position($left: 7px, $top: 4px, $width: 7px);
+  }
+
+  .metro__5 {
+    display: inline-block;
+    @include width_height_back($width: 3px, $height: 27px, $background-color: #fff);
+    @include position($left: 9px, $top: 1px, $width: 4px);
+  }
+
+  .metro__6 {
+    display: inline-block;
+    @include width_height_back($width: 3px, $height: 27px, $background-color: #fff);
+    @include position($left: 16px, $top: 1px, $width: 4px);
+  }
+
+}
+/*公交换乘图标，公用*/
+.bus-change_left,.bus-change_right{
+  @include scale;
+  @include  border-radius($border-radius:4px);
+  @include width_height_back($width:23px, $height: 17px, $background-color: red);
+  position:relative;
+  .bus-change_1,.bus-change_2{
+    @include width_height_back($width:6px, $height: 6px, $background-color: #fff);
+    z-index: 2;
+  }
+}
+.bus-change_right{
+  margin-left:-5px;
+}
+.bus-change_1{
+  @include position($left:3px,$top:4px,$width:6px);
+}
+.bus-change_2{
+  @include position($left:14px,$top:4px,$width:6px);
+}
+.bus-change_3,.bus-change_4{
+  @include width_height_back($width:6px, $height: 7px, $background-color:red);
+  @include border-radius(50%);
+  z-index: 2;
+}
+.bus-change_3{
+  @include position($left:3px,$top:13px,$width:3px);
+}
+.bus-change_4{
+  @include position($left:16px,$top:13px,$width:3px);
+}
+
+.bus-change_5{
+  @include position($left:-34px,$top:5px,$width:30px);
+  @include width_height_back($width:50px, $height: 17px, $background-color:transparent);
+  @include  border($border-top:none,$border-right:none,$border-bottom:1px solid red,$border-left:1px solid red);
+}
+.bus-change_left .bus-change_5{
+  @include  border($border-top:1px solid red,$border-right:1px solid red,$border-bottom:none,$border-left:none);
+  top:-3px;
+  left:7px;
+}
+.bus-change_text{
+  margin-left:-5px;
+}
+
+/*医院图标，公用*/
+.hospital__icon1 {
+  @include  width_height($width:30px, $height:30px);
+  -moz-transform: rotate(45deg) scale(0.8);
+  -webkit-transform:rotate(45deg) scale(0.8);
+  -ms-transform: rotate(45deg) scale(0.8);
+  transform:rotate(45deg) scale(0.8);
+  margin-left:3px;
+  span {
+    @include  width_height_back($width:12px, $height:12px,$background-color:red);
+  }
+  .hospital_1, .hospital_2, .hospital_3, .hospital_4 {
+    margin-right: -5px;
+    @include  border-radius($border-radius:4px);
+
+  }
+  .hospital_3, .hospital_4 {
+    margin-bottom: 6px;
+  }
+}
+.hospital__icon2{
+  @include scale;
+  position:relative;
+  .hospital_5{
+    @include  width_height_back($width:5px, $height:25px,$background-color:#fff);
+    @include position($left:-34px,$top:-13px,$width:7px)
+  }
+  .hospital_6{
+    @include  width_height_back($width:5px, $height:25px,$background-color:#fff);
+    @include position($left:-34px,$top:-13px,$width:7px);
+    @include rotate($rotate:rotate(-90deg));
+  }
+
+}
+
+/*长途汽车图标，公用*/
+.long-distance_icon{
+  @include scale;
+  @include width_height_back($width: 57px, $height: 20px, $background-color: red);
+  @include  border-radius($border-radius:6px 6px 4px 4px);
+  position:relative;
+  span{
+    @include width_height_back($width: 6px, $height: 7px, $background-color: #fff);
+    margin-left:-5px;
+    margin-top:-7px;
+  }
+  .long-distance_1{
+    margin-left:5px;
+  }
+  .long-distance_7,.long-distance_8
+  {
+    height:9px;
+    background-color: red;
+    @include position($left: 17px, $top: 23px, $width: 7px);
+    @include border-radius(50%);
+  }
+  .long-distance_8{
+    left:41px;
+  }
+
+}
+
+/*头部上部部分开始*/
+.container .header .header__up {
+  border-bottom: 2px solid #fff;
+  h1 {
+    @include margin_padding($margin: 0, $padding: 5px 0 0 0);
+    @include font_textalign($font: 50px, $text-align: center);
+    letter-spacing: 30px;
+  }
+  h2 {
+    @include font_textalign($font: 26px, $text-align: left);
+    @include margin_padding($margin: -5px 0 5px, $padding: 0 0 0 141px);
+  }
+}
+
+/*头部下部分开始*/
+.header__down {
+  position: relative;
+  .qcode {
+    @include font_textalign;
+    @include width_height_back($width: 60px, $height: 95px, $background-color: #fff);
+    color: #000;
+    position: absolute;;
+    right: 10px;
+    img {
+      width: 50px;
+    }
+    p {
+      @include height_lineheight($height: 21px, $line-height: 21px);
+
+    }
+
+  }
+  h2 {
+    @include margin_padding($margin: 10px 0, $padding: 0 0 0 $padding-left);
+    @include font_letterspacing($font-size: 28px, $letter-spacing: 13px);
+  }
+  .p3 {
+    padding-left: $padding-left;
+    letter-spacing: 5px;
+    font-weight: bold;
+    color: #ffee6a;
+    .service-time {
+      font-size: 24px;
+    }
+    .service-number {
+      @include font_letterspacing($font-size: 24px, $letter-spacing: 1px)
+    }
+  }
+
+  .p4 {
+    padding: 0 0 10px $padding-left;
+    font-size: 14px;
+    border-bottom: 2px solid #fff;
+    span {
+      @extend %display;
+    }
+
+    .metro__text{
+      margin-left:-5px;
+    }
+
+    .hospital__text{
+      margin-left:-14px;
+    }
+
+  }
+}
+
+.long-distance_text{
+  margin-left:-8px;
+}
+
+/*内容部分开始*/
+.content{
+  .content-rode{
+    span{
+      @extend %display;
+    }
+    .rode_number{
+      font-size:28px;
+      font-weight:bold;
+      color:red;
+      text-shadow:0 0 2px yellow,1px 1px 2px yellow;
+      padding-left:36px;
+    }
+    .rode_to,.rode_dest{
+      font-size:22px;
+      margin-right:5px;
+    }
+    .rode_to{
+      margin-left:50px;
+    }
+    .management_belonging{
+      float:right;
+      margin-right:7px;
+      line-height: 25px;
+    }
+  }
+}
+
+.content .p5{
+  padding-top:$padding-left;
+  padding-left:$padding-left;
+  background-color: #fff;
+  color:#000;
+  position:relative;
+  height:130px;
+  span{
+    @include display_height_width($height:auto,$width:16px);
+    @include  font_textalign($font:13px);
+    vertical-align: top;
+    text-align: center;
+  }
+  .now{
+    border:1px solid red;
+  }
+}
+
+
+.content .p5 .area_belongs{
+  @include display_height_width($height:15px,$width:540px);
+  position:relative;
+  line-height: 15px;
+  border:1px solid red;
+  margin-right:$padding-left;
+  span{
+    @include display_height_width($height:100%,$width:auto);
+    border-right:1px solid red;
+    text-align: center;
+  }
+  .area_belongs_1{
+    width:48px;
+  }
+  .area_belongs_2{
+    width:131px;
+  }
+  .area_belongs_3{
+    width:178px;
+  }
+  .area_belongs_4{
+    width:37px;
+    @include font_letterspacing($font-size:12px,$letter-spacing:-2px);
+    margin-left:-11px;
+  }
+  .area_belongs_5{
+    width:108px;
+    border:none
+  }
+}
+
+.content .p5 .metro_icon{
+  @include width_height($width:30px, $height:30px);
+@include scale($scale:scale(0.5));
+  @include  position2($left:310px,$top:-4px);
+}
+.content .p5 .metro__1,.content .p5 .metro__3{
+  @include width_height($width:10px, $height:0px);
+}
+.content .p5 .metro__2,.content .p5 .metro__4{
+  @include width_height($width:7px, $height:0px);
+}
+.content .p5 .metro__5,.content .p5 .metro__6{
+  @include width_height($width:3px, $height:27px);
+}
+
+.content .p5  .bus-change_icon{
+  width:48px;
+  @include scale($scale:scale(0.6));
+  @include position2($left:385px,$top:2px);
+}
+.content .p5 .bus-change_left,.content .p5 .bus-change_right{
+
+  @include width_height($width:23px, $height: 17px);
+  .bus-change_1,.bus-change_2{
+    @include width_height($width:6px, $height: 6px);
+  }
+}
+.content .p5 .bus-change_1,.bus-change_2{
+width:6px;
+}
+
+.content .p5 .bus-change_3,.content .p5 .bus-change_4{
+  @include width_height($width:3px, $height: 7px);
+}
+
+
+.content .p5 .bus-change_5{
+  @include width_height($width:50px, $height:17px);
+}
+
+.content .p5  .identification_3 .metro_icon{
+  left:502px;
+}
+
+.p6{
+  @include  width_height_back($width:100%, $height:20px,$background-color:yellow);
+  color:#000;
+  .next-station{
+    padding-left:40px;
+    font-size:14px;
+  }
+}
+/*内容部分结束*/
+
+
+/*底部部分开始*/
+.footer{
+  @include  font_textalign($font:60px);
+  letter-spacing: 25px;
+  line-height: 100px;
+  margin-top:75px;
+}

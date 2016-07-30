@@ -1,0 +1,608 @@
+@charset "UTF-8";
+.container {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.header__down .p4 span, .content .content-rode span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+body, p {
+    margin: 0;
+    padding: 0;
+    font-family: "楷体", Arial, "雅黑", "宋体";
+}
+
+.container {
+    width: 600px;
+    height: 800px;
+    background-color: #384BFF;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 600px;
+    margin: -300px 0 0 -400px;
+    padding: 10px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.inner-con-box {
+    background-color: #7183FF;
+    height: 100%;
+}
+
+/*地铁图标，公用*/
+.metro_icon {
+    width: 30px;
+    height: 30px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    background-color: #008000;
+    position: relative;
+    margin-left: -10px;
+}
+
+.metro_icon .metro__1 {
+    width: 10px;
+    height: 0px;
+    display: inline-block;
+    position: absolute;
+    left: 4px;
+    top: 17px;
+    width: 10px;
+    -moz-border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+    border-top: 10px solid #fff;
+    border-right: 10px solid #fff;
+    border-bottom: none;
+    border-left: none;
+}
+
+.metro_icon .metro__2 {
+    display: inline-block;
+    width: 7px;
+    height: 0px;
+    border-top: 7px solid #008000;
+    border-right: 7px solid #008000;
+    border-bottom: none;
+    border-left: none;
+    -moz-border-radius: 7px 7px 0 0;
+    -webkit-border-radius: 7px 7px 0 0;
+    border-radius: 7px 7px 0 0;
+    position: absolute;
+    left: 7px;
+    top: 20px;
+    width: 7px;
+}
+
+.metro_icon .metro__3 {
+    display: inline-block;
+    width: 10px;
+    height: 0px;
+    border-top: none;
+    border-right: none;
+    border-bottom: 10px solid #fff;
+    border-left: 10px solid #fff;
+    -moz-border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 10px;
+}
+
+.metro_icon .metro__4 {
+    display: inline-block;
+    width: 7px;
+    height: 0px;
+    border-top: none;
+    border-right: none;
+    border-bottom: 7px solid #008000;
+    border-left: 7px solid #008000;
+    -moz-border-radius: 0 0 7px 7px;
+    -webkit-border-radius: 0 0 7px 7px;
+    border-radius: 0 0 7px 7px;
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    width: 7px;
+    -moz-border-radius: 0 0 7px 7px;
+    -webkit-border-radius: 0 0 7px 7px;
+    border-radius: 0 0 7px 7px;
+    position: absolute;
+    left: 7px;
+    top: 4px;
+    width: 7px;
+}
+
+.metro_icon .metro__5 {
+    display: inline-block;
+    width: 3px;
+    height: 27px;
+    background-color: #fff;
+    position: absolute;
+    left: 9px;
+    top: 1px;
+    width: 4px;
+}
+
+.metro_icon .metro__6 {
+    display: inline-block;
+    width: 3px;
+    height: 27px;
+    background-color: #fff;
+    position: absolute;
+    left: 16px;
+    top: 1px;
+    width: 4px;
+}
+
+/*公交换乘图标，公用*/
+.bus-change_left, .bus-change_right {
+    -moz-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    width: 23px;
+    height: 17px;
+    background-color: red;
+    position: relative;
+}
+
+.bus-change_left .bus-change_1, .bus-change_left .bus-change_2, .bus-change_right .bus-change_1, .bus-change_right .bus-change_2 {
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    z-index: 2;
+}
+
+.bus-change_right {
+    margin-left: -5px;
+}
+
+.bus-change_1 {
+    position: absolute;
+    left: 3px;
+    top: 4px;
+    width: 6px;
+}
+
+.bus-change_2 {
+    position: absolute;
+    left: 14px;
+    top: 4px;
+    width: 6px;
+}
+
+.bus-change_3, .bus-change_4 {
+    width: 6px;
+    height: 7px;
+    background-color: red;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.bus-change_3 {
+    position: absolute;
+    left: 3px;
+    top: 13px;
+    width: 3px;
+}
+
+.bus-change_4 {
+    position: absolute;
+    left: 16px;
+    top: 13px;
+    width: 3px;
+}
+
+.bus-change_5 {
+    position: absolute;
+    left: -34px;
+    top: 5px;
+    width: 30px;
+    width: 50px;
+    height: 17px;
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid red;
+    border-left: 1px solid red;
+}
+
+.bus-change_left .bus-change_5 {
+    border-top: 1px solid red;
+    border-right: 1px solid red;
+    border-bottom: none;
+    border-left: none;
+    top: -3px;
+    left: 7px;
+}
+
+.bus-change_text {
+    margin-left: -5px;
+}
+
+/*医院图标，公用*/
+.hospital__icon1 {
+    width: 30px;
+    height: 30px;
+    -moz-transform: rotate(45deg) scale(0.8);
+    -webkit-transform: rotate(45deg) scale(0.8);
+    -ms-transform: rotate(45deg) scale(0.8);
+    transform: rotate(45deg) scale(0.8);
+    margin-left: 3px;
+}
+
+.hospital__icon1 span {
+    width: 12px;
+    height: 12px;
+    background-color: red;
+}
+
+.hospital__icon1 .hospital_1, .hospital__icon1 .hospital_2, .hospital__icon1 .hospital_3, .hospital__icon1 .hospital_4 {
+    margin-right: -5px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.hospital__icon1 .hospital_3, .hospital__icon1 .hospital_4 {
+    margin-bottom: 6px;
+}
+
+.hospital__icon2 {
+    -moz-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    position: relative;
+}
+
+.hospital__icon2 .hospital_5 {
+    width: 5px;
+    height: 25px;
+    background-color: #fff;
+    position: absolute;
+    left: -34px;
+    top: -13px;
+    width: 7px;
+}
+
+.hospital__icon2 .hospital_6 {
+    width: 5px;
+    height: 25px;
+    background-color: #fff;
+    position: absolute;
+    left: -34px;
+    top: -13px;
+    width: 7px;
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+/*长途汽车图标，公用*/
+.long-distance_icon {
+    -moz-transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    width: 57px;
+    height: 20px;
+    background-color: red;
+    -moz-border-radius: 6px 6px 4px 4px;
+    -webkit-border-radius: 6px 6px 4px 4px;
+    border-radius: 6px 6px 4px 4px;
+    position: relative;
+}
+
+.long-distance_icon span {
+    width: 6px;
+    height: 7px;
+    background-color: #fff;
+    margin-left: -5px;
+    margin-top: -7px;
+}
+
+.long-distance_icon .long-distance_1 {
+    margin-left: 5px;
+}
+
+.long-distance_icon .long-distance_7, .long-distance_icon .long-distance_8 {
+    height: 9px;
+    background-color: red;
+    position: absolute;
+    left: 17px;
+    top: 23px;
+    width: 7px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.long-distance_icon .long-distance_8 {
+    left: 41px;
+}
+
+/*头部上部部分开始*/
+.container .header .header__up {
+    border-bottom: 2px solid #fff;
+}
+
+.container .header .header__up h1 {
+    margin: 0;
+    padding: 5px 0 0 0;
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 30px;
+}
+
+.container .header .header__up h2 {
+    font-size: 26px;
+    text-align: left;
+    margin: -5px 0 5px;
+    padding: 0 0 0 141px;
+}
+
+/*头部下部分开始*/
+.header__down {
+    position: relative;
+}
+
+.header__down .qcode {
+    font-size: 12px;
+    text-align: center;
+    width: 60px;
+    height: 95px;
+    background-color: #fff;
+    color: #000;
+    position: absolute;
+    right: 10px;
+}
+
+.header__down .qcode img {
+    width: 50px;
+}
+
+.header__down .qcode p {
+    height: 21px;
+    line-height: 21px;
+}
+
+.header__down h2 {
+    margin: 10px 0;
+    padding: 0 0 0 20px;
+    font-size: 28px;
+    letter-spacing: 13px;
+}
+
+.header__down .p3 {
+    padding-left: 20px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    color: #ffee6a;
+}
+
+.header__down .p3 .service-time {
+    font-size: 24px;
+}
+
+.header__down .p3 .service-number {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.header__down .p4 {
+    padding: 0 0 10px 20px;
+    font-size: 14px;
+    border-bottom: 2px solid #fff;
+}
+
+.header__down .p4 .metro__text {
+    margin-left: -5px;
+}
+
+.header__down .p4 .hospital__text {
+    margin-left: -14px;
+}
+
+.long-distance_text {
+    margin-left: -8px;
+}
+
+/*内容部分开始*/
+.content .content-rode .rode_number {
+    font-size: 28px;
+    font-weight: bold;
+    color: red;
+    text-shadow: 0 0 2px yellow, 1px 1px 2px yellow;
+    padding-left: 36px;
+}
+
+.content .content-rode .rode_to, .content .content-rode .rode_dest {
+    font-size: 22px;
+    margin-right: 5px;
+}
+
+.content .content-rode .rode_to {
+    margin-left: 50px;
+}
+
+.content .content-rode .management_belonging {
+    float: right;
+    margin-right: 7px;
+    line-height: 25px;
+}
+
+.content .p5 {
+    padding-top: 20px;
+    padding-left: 20px;
+    background-color: #fff;
+    color: #000;
+    position: relative;
+    height: 130px;
+}
+
+.content .p5 span {
+    display: inline-block;
+    height: auto;
+    width: 16px;
+    font-size: 13px;
+    text-align: center;
+    vertical-align: top;
+    text-align: center;
+}
+
+.content .p5 .now {
+    border: 1px solid red;
+}
+
+.content .p5 .area_belongs {
+    display: inline-block;
+    height: 15px;
+    width: 540px;
+    position: relative;
+    line-height: 15px;
+    border: 1px solid red;
+    margin-right: 20px;
+}
+
+.content .p5 .area_belongs span {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    border-right: 1px solid red;
+    text-align: center;
+}
+
+.content .p5 .area_belongs .area_belongs_1 {
+    width: 48px;
+}
+
+.content .p5 .area_belongs .area_belongs_2 {
+    width: 131px;
+}
+
+.content .p5 .area_belongs .area_belongs_3 {
+    width: 178px;
+}
+
+.content .p5 .area_belongs .area_belongs_4 {
+    width: 37px;
+    font-size: 12px;
+    letter-spacing: -2px;
+    margin-left: -11px;
+}
+
+.content .p5 .area_belongs .area_belongs_5 {
+    width: 108px;
+    border: none;
+}
+
+.content .p5 .metro_icon {
+    width: 30px;
+    height: 30px;
+    -moz-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    position: absolute;
+    left: 310px;
+    top: -4px;
+}
+
+.content .p5 .metro__1, .content .p5 .metro__3 {
+    width: 10px;
+    height: 0px;
+}
+
+.content .p5 .metro__2, .content .p5 .metro__4 {
+    width: 7px;
+    height: 0px;
+}
+
+.content .p5 .metro__5, .content .p5 .metro__6 {
+    width: 3px;
+    height: 27px;
+}
+
+.content .p5 .bus-change_icon {
+    width: 48px;
+    -moz-transform: scale(0.6);
+    -webkit-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    transform: scale(0.6);
+    position: absolute;
+    left: 385px;
+    top: 2px;
+}
+
+.content .p5 .bus-change_left, .content .p5 .bus-change_right {
+    width: 23px;
+    height: 17px;
+}
+
+.content .p5 .bus-change_left .bus-change_1, .content .p5 .bus-change_left .bus-change_2, .content .p5 .bus-change_right .bus-change_1, .content .p5 .bus-change_right .bus-change_2 {
+    width: 6px;
+    height: 6px;
+}
+
+.content .p5 .bus-change_1, .bus-change_2 {
+    width: 6px;
+}
+
+.content .p5 .bus-change_3, .content .p5 .bus-change_4 {
+    width: 3px;
+    height: 7px;
+}
+
+.content .p5 .bus-change_5 {
+    width: 50px;
+    height: 17px;
+}
+
+.content .p5 .identification_3 .metro_icon {
+    left: 502px;
+}
+
+.p6 {
+    width: 100%;
+    height: 20px;
+    background-color: yellow;
+    color: #000;
+}
+
+.p6 .next-station {
+    padding-left: 40px;
+    font-size: 14px;
+}
+
+/*内容部分结束*/
+/*底部部分开始*/
+.footer {
+    font-size: 60px;
+    text-align: center;
+    letter-spacing: 25px;
+    line-height: 100px;
+    margin-top: 75px;
+}
+
+/*# sourceMappingURL=bus.css.map */
